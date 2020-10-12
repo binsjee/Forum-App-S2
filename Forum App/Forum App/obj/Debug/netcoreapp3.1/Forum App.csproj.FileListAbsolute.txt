@@ -1,0 +1,35 @@
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Forum App.exe
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Forum App.deps.json
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Forum App.runtimeconfig.json
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Forum App.runtimeconfig.dev.json
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Forum App.dll
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Forum App.pdb
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Forum App.Views.dll
+C:\Users\vinci\source\repos\Forum App\Forum App\bin\Debug\netcoreapp3.1\Forum App.Views.pdb
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.csprojAssemblyReference.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.AssemblyInfoInputs.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.AssemblyInfo.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.RazorAssemblyInfo.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.RazorAssemblyInfo.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.TagHelpers.input.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.TagHelpers.output.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.RazorCoreGenerate.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.RazorTargetAssemblyInfo.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.RazorTargetAssemblyInfo.cs
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.Views.pdb
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\staticwebassets\Forum App.StaticWebAssets.Manifest.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\staticwebassets\Forum App.StaticWebAssets.xml
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.dll
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.pdb
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.genruntimeconfig.cache
+C:\Users\vinci\source\repos\Forum App\Forum App\obj\Debug\netcoreapp3.1\Forum App.csproj.CopyComplete
