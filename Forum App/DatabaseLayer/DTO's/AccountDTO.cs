@@ -18,5 +18,9 @@ namespace DatabaseLayer.DTO_s
         {
             Id = id;
         }
+        public AccountDTO()
+        {
+
+        }
     }
 }

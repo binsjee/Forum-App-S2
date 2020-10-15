@@ -8,6 +8,6 @@ namespace DatabaseLayer.Interfaces
 {
     public interface IAccountContext : IGenericQueries<AccountDTO>
     {
-        
+        bool Update(AccountDTO a);
     }
 }

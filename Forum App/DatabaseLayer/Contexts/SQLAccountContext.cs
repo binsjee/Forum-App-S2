@@ -28,7 +28,7 @@ namespace DatabaseLayer.Contexts
 
                 for (int x = 0; x < results.Tables[0].Rows.Count; x++)
                 {
-                    Account a = DataSetParser.DataSetToAccount(results, x);
+                    AccountDTO a = DataSetParser.DataSetToAccount(results, x);
                     accountList.Add(a);
                 }
                 return accountList;
@@ -57,6 +57,16 @@ namespace DatabaseLayer.Contexts
             {
                 return null;
             }
+        }
+
+        public long Insert(object T)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update(AccountDTO a)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -9,6 +9,6 @@ namespace DatabaseLayer.Interfaces
     {
         List<T> GetAll();
         T GetById(int id);
-
+        long Insert(object T);
     }
 }
