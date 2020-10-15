@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Forum_App.Models.Data
+namespace DatabaseLayer.DTO_s
 {
-    public class Account
+    public class AccountDTO
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -14,7 +14,7 @@ namespace Forum_App.Models.Data
         public string Password { get; set; }
         public string Username { get; set; }
         public bool Administrator { get; set; }
-        public Account(int id)
+        public AccountDTO(int id)
         {
             Id = id;
         }
