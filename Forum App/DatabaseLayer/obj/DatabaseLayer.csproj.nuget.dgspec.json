@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\DatabaseLayer\\DatabaseLayer.csproj": {}
+    "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\DatabaseLayer\\DatabaseLayer.csproj": {}
   },
   "projects": {
-    "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\DatabaseLayer\\DatabaseLayer.csproj": {
+    "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\DatabaseLayer\\DatabaseLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\DatabaseLayer\\DatabaseLayer.csproj",
+        "projectUniqueName": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\DatabaseLayer\\DatabaseLayer.csproj",
         "projectName": "DatabaseLayer",
-        "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\DatabaseLayer\\DatabaseLayer.csproj",
+        "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\DatabaseLayer\\DatabaseLayer.csproj",
         "packagesPath": "C:\\Users\\vinci\\.nuget\\packages\\",
-        "outputPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\DatabaseLayer\\obj\\",
+        "outputPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\DatabaseLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

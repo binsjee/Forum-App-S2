@@ -35,3 +35,53 @@ B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcorea
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.pdb
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.genruntimeconfig.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.csproj.CopyComplete
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.csprojAssemblyReference.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.AssemblyInfoInputs.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.AssemblyInfo.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.csproj.CoreCompileInputs.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.RazorAssemblyInfo.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.RazorAssemblyInfo.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Presentation Layer.exe
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Presentation Layer.deps.json
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Presentation Layer.runtimeconfig.json
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Presentation Layer.runtimeconfig.dev.json
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Presentation Layer.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Presentation Layer.pdb
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Presentation Layer.Views.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Presentation Layer.Views.pdb
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Business Layer.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Database Layer.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Business Layer.pdb
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Database Layer.pdb
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.TagHelpers.input.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.TagHelpers.output.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.RazorCoreGenerate.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.RazorTargetAssemblyInfo.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.RazorTargetAssemblyInfo.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.Views.pdb
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.csproj.CopyComplete
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\staticwebassets\Presentation Layer.StaticWebAssets.Manifest.cache
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\staticwebassets\Presentation Layer.StaticWebAssets.xml
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.dll
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.pdb
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.genruntimeconfig.cache
