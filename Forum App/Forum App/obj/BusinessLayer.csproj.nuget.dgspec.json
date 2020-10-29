@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Forum App\\BusinessLayer.csproj": {}
+    "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Forum App\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Forum App\\BusinessLayer.csproj": {
+    "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Forum App\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Forum App\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Forum App\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Forum App\\BusinessLayer.csproj",
+        "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Forum App\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\vinci\\.nuget\\packages\\",
-        "outputPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Forum App\\obj\\",
+        "outputPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Forum App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
