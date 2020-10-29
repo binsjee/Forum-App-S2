@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DatabaseLayer.DTO_s
+namespace Database_Layer.DTO_s
 {
     public class MessageDTO
     {

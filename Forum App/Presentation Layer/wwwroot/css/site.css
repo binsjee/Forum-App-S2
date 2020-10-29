@@ -71,4 +71,28 @@ body {
 }
 
 /* Home Page */
+.formulierRij {
+    width: 50%;
+    height: 6.5em;
+    padding: 0.2em;
+    margin-top: 0.05em;
+}
 
+.formulier-half {
+    width: 50%;
+    float: left;
+}
+
+.formulierRijContent {
+}
+
+.welkomRij {
+    text-align: center;
+    width: 100%;
+    height: 4.5em;
+}
+
+.welkomRijContent button {
+    font-size: 28px;
+    border-radius: 7px;
+}

@@ -11,7 +11,7 @@ namespace Forum_App.Contexts
         private readonly string _ConnectionString;
         public SQLBaseContext(IConfiguration configuration)
         {
-            _ConnectionString = configuration.GetConnectionString("DefaultConnection");
+            _ConnectionString = configuration.GetConnectionString("Development");
         }
         public DataSet ExecuteSql(string sql, List<KeyValuePair<string, string>> parameters)
         {

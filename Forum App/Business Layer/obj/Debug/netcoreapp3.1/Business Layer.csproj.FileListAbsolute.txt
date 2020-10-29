@@ -10,3 +10,15 @@ C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Business Layer\obj\Deb
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csproj.CopyComplete
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.dll
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.pdb
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\bin\Debug\netcoreapp3.1\Business Layer.deps.json
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\bin\Debug\netcoreapp3.1\Business Layer.dll
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\bin\Debug\netcoreapp3.1\Business Layer.pdb
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\bin\Debug\netcoreapp3.1\Database Layer.dll
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\bin\Debug\netcoreapp3.1\Database Layer.pdb
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csprojAssemblyReference.cache
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.AssemblyInfoInputs.cache
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.AssemblyInfo.cs
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csproj.CoreCompileInputs.cache
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csproj.CopyComplete
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.dll
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.pdb

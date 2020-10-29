@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\Business Layer.csproj": {}
+    "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\Business Layer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\Business Layer.csproj": {
+    "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\Business Layer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\Business Layer.csproj",
+        "projectUniqueName": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\Business Layer.csproj",
         "projectName": "Business Layer",
-        "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\Business Layer.csproj",
+        "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\Business Layer.csproj",
         "packagesPath": "C:\\Users\\vinci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\obj\\",
+        "outputPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Database Layer\\Database Layer.csproj": {
-                "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Database Layer\\Database Layer.csproj"
+              "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Database Layer\\Database Layer.csproj": {
+                "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Database Layer\\Database Layer.csproj"
               }
             }
           }
@@ -59,18 +59,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Database Layer\\Database Layer.csproj": {
+    "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Database Layer\\Database Layer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Database Layer\\Database Layer.csproj",
+        "projectUniqueName": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Database Layer\\Database Layer.csproj",
         "projectName": "Database Layer",
-        "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Database Layer\\Database Layer.csproj",
+        "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Database Layer\\Database Layer.csproj",
         "packagesPath": "C:\\Users\\vinci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Database Layer\\obj\\",
+        "outputPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Database Layer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -124,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

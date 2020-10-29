@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
 using System.ComponentModel.DataAnnotations;
-using DatabaseLayer.DTO_s;
+using Database_Layer.DTO_s;
 
 namespace DatabaseLayer.Parsers
 {
@@ -20,6 +20,17 @@ namespace DatabaseLayer.Parsers
                 Password = (string)set.Tables[0].Rows[rowIndex][4],
                 Username = (string)set.Tables[0].Rows[rowIndex][5],
                 Administrator = (bool)set.Tables[0].Rows[rowIndex][6]
+            };
+        }
+        public static PostDTO DataSetToPost(DataSet set, int rowIndex)
+        {
+            return new PostDTO((int)set.Tables[0].Rows[rowIndex][0])
+            {
+                Title = (string)set.Tables[0].Rows[rowIndex][1],
+                Content = (string)set.Tables[0].Rows[rowIndex][2],
+                PostTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
+                postNumber = (int)set.Tables[0].Rows[rowIndex][4],
+                AccountId = (int)set.Tables[0].Rows[rowIndex][5]
             };
         }
     }

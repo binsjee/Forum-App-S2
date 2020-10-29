@@ -1,0 +1,43 @@
+﻿@model Business_Layer.ViewModels.AccountDetailVM
+
+<div id="">
+    <h1> Informatie Formulier </h1>
+    <form asp-action="RegisterAccount">
+        <div class="formulierRij">
+            <div class="formulier-half">
+                <p><label asp-for="FirstName"></label></p>
+                <input asp-for="FirstName" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="formulier-half">
+                <p><label asp-for="LastName"></label></p>
+                <input asp-for="LastName" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <div class="formulierRijContent">
+                <p><label asp-for="Email"></label></p>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <div class="formulierRijContent">
+                <p><label asp-for="Password"></label></p>
+                <input asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <div class="formulierRijContent">
+                <p><label asp-for="Username"></label></p>
+                <input asp-for="Username" />
+                <span asp-validation-for="Username"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <input type="submit" value="Opslaan" />
+        </div>
+    </form>
+</div>

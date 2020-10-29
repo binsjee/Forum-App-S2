@@ -575,11 +575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Presentation Layer\\Presentation Layer.csproj",
+      "projectUniqueName": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Presentation Layer\\Presentation Layer.csproj",
       "projectName": "Presentation Layer",
-      "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Presentation Layer\\Presentation Layer.csproj",
+      "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Presentation Layer\\Presentation Layer.csproj",
       "packagesPath": "C:\\Users\\vinci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Presentation Layer\\obj\\",
+      "outputPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Presentation Layer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -598,8 +598,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\Business Layer.csproj": {
-              "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\Business Layer.csproj"
+            "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\Business Layer.csproj": {
+              "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\Business Layer.csproj"
             }
           }
         }
@@ -630,7 +630,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

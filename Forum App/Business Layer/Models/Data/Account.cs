@@ -18,5 +18,9 @@ namespace Forum_App.Models.Data
         {
             Id = id;
         }
+        public Account()
+        {
+
+        }
     }
 }

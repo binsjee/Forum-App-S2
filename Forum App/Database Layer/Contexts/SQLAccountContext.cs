@@ -1,4 +1,4 @@
-﻿using DatabaseLayer.DTO_s;
+﻿using Database_Layer.DTO_s;
 using DatabaseLayer.Interfaces;
 using DatabaseLayer.Parsers;
 using Forum_App.Contexts;
@@ -23,7 +23,7 @@ namespace DatabaseLayer.Contexts
             List<AccountDTO> accountList = new List<AccountDTO>();
             try
             {
-                string sql = "SELECT AccountID, FirstName, LastName, Email, Password, Username, Administrator FROM [Account]";
+                string sql = "SELECT ID, FirstName, LastName, Email, Password, Username, Administrator FROM [Account]";
                 DataSet results = ExecuteSql(sql, new List<KeyValuePair<string, string>>());
 
                 for (int x = 0; x < results.Tables[0].Rows.Count; x++)
@@ -43,10 +43,10 @@ namespace DatabaseLayer.Contexts
         {
             try
             {
-                string sql = "SELECT AccountID, FirstName, LastName, Email, Password, Username, Administrator FROM Account WHERE AccountID = @AccountID";
+                string sql = "SELECT ID, FirstName, LastName, Email, Password, Username, Administrator FROM Account WHERE ID = @ID";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
-                    new KeyValuePair<string, string>("AccountID", id.ToString())
+                    new KeyValuePair<string, string>("ID", id.ToString())
                 };
 
                 DataSet results = ExecuteSql(sql, parameters);
@@ -59,9 +59,26 @@ namespace DatabaseLayer.Contexts
             }
         }
 
-        public long Insert(object T)
+        public long Insert(AccountDTO dto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string sql = "INSERT INTO Account(FirstName, LastName, Email, Password, Username, Administrator) OUTPUT INSERTED.ID VALUES(@FirstName, @LastName, @Email, @Password, @Username, 0)";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
+                {
+                    new KeyValuePair<string, string>("FirstName", dto.FirstName),
+                    new KeyValuePair<string, string>("LastName", dto.LastName),
+                    new KeyValuePair<string, string>("Email", dto.Email),
+                    new KeyValuePair<string, string>("Password", dto.Password),
+                    new KeyValuePair<string, string>("Username", dto.Username)
+                };
+                int result = ExecuteInsert(sql, parameters);
+                return result;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
         public bool Update(AccountDTO a)

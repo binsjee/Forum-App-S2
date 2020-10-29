@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DatabaseLayer.Contexts;
+using DatabaseLayer.Interfaces;
+using Forum_App.Containers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +27,10 @@ namespace Presentation_Layer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            //idk
+            services.AddScoped<IAccountContext, SQLAccountContext>();
+            services.AddScoped<AccountContainer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

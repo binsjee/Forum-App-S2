@@ -1,0 +1,24 @@
+﻿@model Business_Layer.ViewModels.PostDetailVM
+
+<div id="">
+    <h1> Create a Post </h1>
+    <form asp-action="CreatePost">
+        <div class="formulierRij">
+            <div class="formulier-half">
+                <p><label asp-for="Title"></label></p>
+                <input asp-for="Title" />
+                <span asp-validation-for="Title"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <div class="formulier-half">
+                <p><label asp-for="Content"></label></p>
+                <input asp-for="Content" />
+                <span asp-validation-for="Content"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <input type="submit" value="Opslaan" />
+        </div>
+    </form>
+</div>
