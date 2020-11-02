@@ -1,5 +1,20 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Presentation_Layer.ViewModels.PostDetailVM;
+
+<body>
+<div id="">
+    <h1> All posts </h1>
+        <div class="formulierRij">
+            <div class="formulier-half">
+                @Html.Display(Model.Title)
+            </div>
+        </div>
+        <div class="formulierRij">
+            <div class="formulier-half">
+                @Html.Display(Model.PostContent)
+            </div>
+        </div>
+        <div class="formulierRij">
+            <input type="submit" value="Opslaan" />
+        </div>
+</div>
+</body>

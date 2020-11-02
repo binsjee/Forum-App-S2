@@ -26,18 +26,25 @@ namespace DatabaseLayer.Contexts
             throw new NotImplementedException();
         }
 
-        public long Insert(object T)
-        {
-            //try
-            //{
-            //    string sql = "INSERT INTO Post()"
-            //}
-            throw new NotImplementedException();
-        }
-
         public long Insert(PostDTO dto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string sql = "INSERT INTO Post(Title, PostContent, PostTime) OUTPUT INSERTED.ID VALUES(@Title, @PostContent @PostTime)";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
+                {
+                    new KeyValuePair<string, string>("Title", dto.Title),
+                    new KeyValuePair<string, string>("PostContent", dto.PostContent),
+                    new KeyValuePair<string, string>("PostTime", DateTime.Now.ToString())
+                };
+                int result = ExecuteInsert(sql, parameters);
+                return result;
+
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

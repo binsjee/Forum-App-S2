@@ -19,7 +19,7 @@ namespace Presentation_Layer.Converters
             PostDetailVM vm = new PostDetailVM()
             {
                 Title = model.Title,
-                Content = model.Content
+                PostContent = model.PostContent
             };
             return vm;
         }
@@ -34,7 +34,7 @@ namespace Presentation_Layer.Converters
             Post post = new Post()
             {
                 Title = viewmodel.Title,
-                Content = viewmodel.Content
+                PostContent = viewmodel.PostContent
             };
             return post;
         }

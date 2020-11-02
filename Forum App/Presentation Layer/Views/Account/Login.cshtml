@@ -1,0 +1,14 @@
+﻿@model Business_Layer.ViewModels.AccountDetailVM
+
+<div id="">
+    <h1> Informatie Formulier </h1>
+    <form asp-action="RegisterAccount">
+        <div class="formulierRij">
+            <div class="formulier-half">
+                <p><label asp-for="Username"></label></p>
+                <input asp-for="Username" />
+                <span asp-validation-for="Username"></span>
+            </div>
+        </div>
+    </form>
+</div>

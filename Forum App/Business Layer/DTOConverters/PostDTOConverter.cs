@@ -15,7 +15,7 @@ namespace Business_Layer.DTOConverters
             Post post = new Post()
             {
                 Title = dto.Title,
-                Content = dto.Content
+                PostContent = dto.PostContent
             };
             return post;
         }
@@ -25,7 +25,7 @@ namespace Business_Layer.DTOConverters
             PostDTO dto = new PostDTO()
             {
                 Title = model.Title,
-                Content = model.Content
+                PostContent = model.PostContent
             };
             return dto;
         }

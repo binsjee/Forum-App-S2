@@ -7,6 +7,7 @@ using Forum_App.Models.Data;
 using Forum_App.Containers;
 using Presentation_Layer.ViewModelConverters;
 using Presentation_Layer.ViewModels;
+using Presentation_Layer;
 
 namespace Presentation_Layer.Controllers
 {
@@ -27,7 +28,15 @@ namespace Presentation_Layer.Controllers
         {
             Account account = vmConverter.ViewModelToModel(vm);
             accountContainer.Insert(account);
-            return View("Index");
+            return RedirectToAction("Index", "Home");
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult LoginAccount(AccountDetailVM vm)
+        {
+            return View();
         }
     }
 }

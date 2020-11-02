@@ -9,8 +9,8 @@ namespace Database_Layer.DTO_s
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Content { get; set; }
-        public DateTime PostTime { get; set; }
+        public string PostContent { get; set; }
+        public string PostTime { get; set; }
         public long postNumber { get; set; }
         public int AccountId { get; set; }
 
