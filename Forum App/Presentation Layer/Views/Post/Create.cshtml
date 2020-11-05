@@ -1,4 +1,4 @@
-﻿@model Business_Layer.ViewModels.PostDetailVM
+﻿@model Presentation_Layer.ViewModels.PostDetailVM
 
 <div id="">
     <h1> Create a Post </h1>
@@ -12,9 +12,9 @@
         </div>
         <div class="formulierRij">
             <div class="formulier-half">
-                <p><label asp-for="Content"></label></p>
-                <input asp-for="Content" />
-                <span asp-validation-for="Content"></span>
+                <p><label asp-for="PostContent"></label></p>
+                <input asp-for="PostContent" />
+                <span asp-validation-for="PostContent"></span>
             </div>
         </div>
         <div class="formulierRij">

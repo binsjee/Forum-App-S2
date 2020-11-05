@@ -21,7 +21,13 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult Index()
         {
+
+            List<Post> posts = new List<Post>();
+            posts = postContainer.GetAll();
+            List<PostDetailVM> vms = new List<PostDetailVM>();
+            vms = vmconverter.ModelsToViewModels(posts);
             return View();
+
         }
         public IActionResult Create()
         {

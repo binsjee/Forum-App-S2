@@ -9,7 +9,7 @@ namespace Presentation_Layer.ViewModels
         public int Id { get; set; }
         public string Title { get; set; }
         public string PostContent { get; set; }
-        public string PostTime { get; set; }
+        public DateTime PostTime { get; set; }
         public int AccountId { get; set; }
     }
 }

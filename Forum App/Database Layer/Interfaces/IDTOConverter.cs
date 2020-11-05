@@ -8,5 +8,8 @@ namespace Database_Layer.Interfaces
     {
         Model DtoToModel(DTO dto);
         DTO ModelToDTO(Model model);
+
+        List<DTO> ModelsToDTOs(List<Model> models);
+        List<Model> DTOsToModels(List<DTO> DTOs);
     }
 }

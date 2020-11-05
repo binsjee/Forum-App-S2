@@ -11,7 +11,15 @@ namespace Presentation_Layer.Converters
     {
         public List<PostDetailVM> ModelsToViewModels(List<Post> models)
         {
-            throw new NotImplementedException();
+            List<PostDetailVM> vms = new List<PostDetailVM>();
+            foreach(Post post in models)
+            {
+                PostDetailVM vm = new PostDetailVM();
+                vm.Title = post.Title;
+                vm.PostContent = post.PostContent;
+                vms.Add(vm);
+            }
+            return vms;
         }
 
         public PostDetailVM ModelToViewModel(Post model)
@@ -26,7 +34,15 @@ namespace Presentation_Layer.Converters
 
         public List<Post> ViewModelsToModels(List<PostDetailVM> viewmodels)
         {
-            throw new NotImplementedException();
+            List<Post> posts = new List<Post>();
+            foreach(PostDetailVM vm in viewmodels)
+            {
+                Post post = new Post();
+                post.Title = vm.Title;
+                post.PostContent = vm.PostContent;
+                posts.Add(post);
+            }
+            return posts;
         }
 
         public Post ViewModelToModel(PostDetailVM viewmodel)

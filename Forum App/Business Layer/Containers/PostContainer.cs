@@ -26,5 +26,13 @@ namespace Forum_App.Containers
             dto = converter.ModelToDTO(post);
             return context.Insert(dto);
         }
+        public List<Post> GetAll()
+        {
+            List<PostDTO> DTOs = new List<PostDTO>();
+            DTOs = context.GetAll();
+            List<Post> posts = new List<Post>();
+            posts = converter.DTOsToModels(DTOs);
+            return posts;
+        }
     }
 }

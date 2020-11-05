@@ -10,7 +10,7 @@ namespace Forum_App.Models.Data
         public int Id { get; set; }
         public string Title { get; set; }
         public string PostContent { get; set; }
-        public string PostTime { get; set; }
+        public DateTime PostTime { get; set; }
         public long postNumber { get; set; }
         public int AccountId { get; set; }
 

@@ -1,20 +1,45 @@
-﻿@model Presentation_Layer.ViewModels.PostDetailVM;
+﻿@using Presentation_Layer.ViewModels
+@model Presentation_Layer.ViewModels.PostViewModel
+
+@{ 
+    ViewData["Title"] = "Posts";
+}
 
 <body>
-<div id="">
-    <h1> All posts </h1>
-        <div class="formulierRij">
-            <div class="formulier-half">
-                @Html.Display(Model.Title)
+    <div id="">
+        <h1> All posts </h1>
+        @foreach (PostDetailVM item in Model.PostViewModels)
+        {
+            <div class="formulierRij">
+                <div class="formulier-half">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </div>
             </div>
-        </div>
-        <div class="formulierRij">
-            <div class="formulier-half">
-                @Html.Display(Model.PostContent)
+            <br>
+            <div class="formulierRij">
+                <div class="formulier-half">
+                    @Html.DisplayFor(modelItem => item.PostContent)
+                </div>
             </div>
-        </div>
-        <div class="formulierRij">
-            <input type="submit" value="Opslaan" />
-        </div>
-</div>
+            <br>
+            <div class="formulierRij">
+                <div class="formulier-half">
+                    @Html.DisplayFor(modelItem => item.PostTime)
+                </div>
+            </div>
+        }
+        <!--<div class="formulierRij">
+        <div class="formulier-half">-->
+        @*@Html.Display(Title)*@
+        <!--</div>
+    </div>
+    <div class="formulierRij">
+        <div class="formulier-half">-->
+        @*@Html.Display(PostContent)*@
+        <!--</div>
+    </div>
+    <div class="formulierRij">
+        <input type="submit" value="Opslaan" />
+    </div>-->
+    </div>
 </body>

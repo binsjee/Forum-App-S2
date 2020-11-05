@@ -9,6 +9,11 @@ namespace Business_Layer.DTOConverters
 {
     class AccountDTOConverter : IDTOConverter<AccountDTO, Account>
     {
+        public List<Account> DTOsToModels(List<AccountDTO> DTOs)
+        {
+            throw new NotImplementedException();
+        }
+
         public Account DtoToModel(AccountDTO dto)
         {
             Account account = new Account()
@@ -20,6 +25,11 @@ namespace Business_Layer.DTOConverters
                 Username = dto.Username
             };
             return account;
+        }
+
+        public List<AccountDTO> ModelsToDTOs(List<Account> models)
+        {
+            throw new NotImplementedException();
         }
 
         public AccountDTO ModelToDTO(Account model)
