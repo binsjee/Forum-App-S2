@@ -18,7 +18,7 @@ namespace Database_Layer.DTO_s
         public IEnumerable<ReplyDTO> Replies { get; set; }
         public PostDTO(int id)
         {
-            id = Id;
+            Id = id;
         }
         public PostDTO()
         {

@@ -34,5 +34,13 @@ namespace Forum_App.Containers
             posts = converter.DTOsToModels(DTOs);
             return posts;
         }
+        public Post GetById(int id)
+        {
+            Post post = new Post();
+            PostDTO dto = new PostDTO();
+            dto = context.GetById(id);
+            post = converter.DtoToModel(dto);
+            return post;
+        }
     }
 }

@@ -15,8 +15,10 @@ namespace Presentation_Layer.Converters
             foreach(Post post in models)
             {
                 PostDetailVM vm = new PostDetailVM();
+                vm.Id = post.Id;
                 vm.Title = post.Title;
                 vm.PostContent = post.PostContent;
+                vm.PostTime = post.PostTime;
                 vms.Add(vm);
             }
             return vms;
@@ -26,8 +28,10 @@ namespace Presentation_Layer.Converters
         {
             PostDetailVM vm = new PostDetailVM()
             {
+                Id = model.Id,
                 Title = model.Title,
-                PostContent = model.PostContent
+                PostContent = model.PostContent,
+                PostTime = model.PostTime,
             };
             return vm;
         }

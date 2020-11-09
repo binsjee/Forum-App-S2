@@ -21,12 +21,12 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult Index()
         {
-
+            PostViewModel vm = new PostViewModel();
             List<Post> posts = new List<Post>();
             posts = postContainer.GetAll();
-            List<PostDetailVM> vms = new List<PostDetailVM>();
-            vms = vmconverter.ModelsToViewModels(posts);
-            return View();
+            //List<PostDetailVM> vms = new List<PostDetailVM>();
+            vm.PostViewModels = vmconverter.ModelsToViewModels(posts);
+            return View(vm);
 
         }
         public IActionResult Create()
@@ -38,6 +38,13 @@ namespace Presentation_Layer.Controllers
             Post post = vmconverter.ViewModelToModel(vm);
             postContainer.Insert(post);
             return RedirectToAction("Index");
+        }
+        public IActionResult Detail(int id)
+        {
+            PostDetailVM vm = new PostDetailVM();
+            Post post = postContainer.GetById(id);
+            vm = vmconverter.ModelToViewModel(post);
+            return View(vm);
         }
 
     }

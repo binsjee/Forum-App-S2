@@ -42,7 +42,21 @@ namespace DatabaseLayer.Contexts
 
         public PostDTO GetById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string sql = "SELECT ID, Title, PostContent, PostTime FROM Post WHERE ID = @ID";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
+                {
+                    new KeyValuePair<string, string>("ID", id.ToString()),
+                };
+                DataSet results = ExecuteSql(sql, parameters);
+                PostDTO dto = DataSetParser.DataSetToPost(results, 0);
+                return dto;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
         public long Insert(PostDTO dto)

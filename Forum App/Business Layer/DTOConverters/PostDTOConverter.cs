@@ -16,8 +16,10 @@ namespace Business_Layer.DTOConverters
             foreach (PostDTO dto in DTOs)
             {
                 Post post = new Post();
+                post.Id = dto.Id;
                 post.Title = dto.Title;
                 post.PostContent = dto.PostContent;
+                post.PostTime = dto.PostTime;
                 posts.Add(post);
             }
             return posts;

@@ -24,13 +24,21 @@ namespace DatabaseLayer.Parsers
         }
         public static PostDTO DataSetToPost(DataSet set, int rowIndex)
         {
-            return new PostDTO((int)set.Tables[0].Rows[rowIndex][0])
+            if (set.Tables[0].Rows.Count > 0)
             {
-                Title = (string)set.Tables[0].Rows[rowIndex][1],
-                PostContent = (string)set.Tables[0].Rows[rowIndex][2],
-                PostTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
-                //AccountId = (int)set.Tables[0].Rows[rowIndex][5]
-            };
+
+                return new PostDTO((int)set.Tables[0].Rows[rowIndex][0])
+                {
+                    Title = (string)set.Tables[0].Rows[rowIndex][1],
+                    PostContent = (string)set.Tables[0].Rows[rowIndex][2],
+                    PostTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
+                    //AccountId = (int)set.Tables[0].Rows[rowIndex][5]
+                };
+            }
+            else
+            {
+                return new PostDTO();
+            }
         }
     }
 }

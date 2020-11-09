@@ -96,3 +96,45 @@ body {
     font-size: 28px;
     border-radius: 7px;
 }
+
+/*Post Css*/
+
+.post-title {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, sans-serif;
+    color: black;
+    max-width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.post-desc {
+    font-size: 16px;
+    max-width: 80%;
+    font-family: 'Times New Roman';
+    margin-top: 2%;
+    margin-left: 10%
+}
+
+.item1 {grid-area: title;}
+.item2 {grid-area: content;}
+.item3 {grid-area: time;}
+
+.grid-container{
+    display:grid;
+    grid-template-areas:
+        'title title title title title title'
+        'content content content content content content'
+        'time time time time time time';
+    grid-gap: 10px;
+    background-color: aqua;
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: red;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
