@@ -9,9 +9,11 @@ namespace Forum_App.Models.Data
     public class Reply
     {
         public int Id { get; set; }
-        public string Content { get; set; }
+        public string ReplyContent { get; set; }
         public bool Pinned { get; set; }
-        public Post Post { get; set; }
+        public DateTime ReactionTime { get; set; }
+        public int PostId { get; set; }
+        public int AccountId { get; set; }
         
 
     }

@@ -8,6 +8,7 @@ using Forum_App.Containers;
 using Presentation_Layer.ViewModelConverters;
 using Presentation_Layer.ViewModels;
 using Presentation_Layer;
+using Microsoft.AspNetCore.Http;
 
 namespace Presentation_Layer.Controllers
 {
@@ -36,7 +37,13 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult LoginAccount(AccountDetailVM vm)
         {
-            return View();
+            HttpContext.Session.SetString("Username", vm.Username);
+            HttpContext.Session.SetString("Password", vm.Password);
+            string username = HttpContext.Session.GetString("Username");
+            string password = HttpContext.Session.GetString("Password");
+
+            ViewBag.Message = $"Your username is {username} and password is {password} ";
+            return RedirectToAction("Login", "Account");
         }
     }
 }

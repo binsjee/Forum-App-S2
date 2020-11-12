@@ -8,5 +8,6 @@ namespace DatabaseLayer.Interfaces
 {
     public interface IReplyContext : IGenericQueries<ReplyDTO>
     {
+        public long Insert(ReplyDTO dto);
     }
 }

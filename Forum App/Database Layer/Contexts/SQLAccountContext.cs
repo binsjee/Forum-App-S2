@@ -8,8 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Schema;
 
 namespace DatabaseLayer.Contexts
@@ -87,6 +89,28 @@ namespace DatabaseLayer.Contexts
         public bool Update(AccountDTO a)
         {
             throw new NotImplementedException();
+        }
+        public bool Login(AccountDTO dto)
+        {
+            try
+            {
+                string sql = "SELECT * FROM Account WHERE Username=@Username AND Password=@Password";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>
+                {
+                    new KeyValuePair<string, string>("Username", dto.Username),
+                    new KeyValuePair<string, string>("Password", dto.Password)
+                };
+                DataSet results = ExecuteSql(sql, parameters);
+                AccountDTO Dto = DataSetParser.DataSetToAccount(results, 0);
+
+                
+                return true;
+                
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

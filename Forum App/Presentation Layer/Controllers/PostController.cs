@@ -7,23 +7,27 @@ using Microsoft.AspNetCore.Mvc;
 using Forum_App.Models.Data;
 using Presentation_Layer.ViewModels;
 using Forum_App.Containers;
+using Presentation_Layer.ViewModelConverters;
 
 namespace Presentation_Layer.Controllers
 {
     public class PostController : Controller
     {
         private readonly PostVMConverter vmconverter = new PostVMConverter();
-        private readonly PostContainer postContainer;
+        private readonly PostContainer Container;
+        //private readonly ReplyVMConverter replyvmconverter = new ReplyVMConverter();
+        //private readonly ReplyContainer replyContainer;
 
-        public PostController(PostContainer container)
+        public PostController(PostContainer postcontainer, ReplyContainer replycontainer)
         {
-            this.postContainer = container;
+            this.Container = postcontainer;
+            //this.replyContainer = replycontainer;
         }
         public IActionResult Index()
         {
             PostViewModel vm = new PostViewModel();
             List<Post> posts = new List<Post>();
-            posts = postContainer.GetAll();
+            posts = Container.GetAll();
             //List<PostDetailVM> vms = new List<PostDetailVM>();
             vm.PostViewModels = vmconverter.ModelsToViewModels(posts);
             return View(vm);
@@ -36,13 +40,13 @@ namespace Presentation_Layer.Controllers
         public IActionResult CreatePost(PostDetailVM vm)
         {
             Post post = vmconverter.ViewModelToModel(vm);
-            postContainer.Insert(post);
+            Container.Insert(post);
             return RedirectToAction("Index");
         }
         public IActionResult Detail(int id)
         {
             PostDetailVM vm = new PostDetailVM();
-            Post post = postContainer.GetById(id);
+            Post post = Container.GetById(id);
             vm = vmconverter.ModelToViewModel(post);
             return View(vm);
         }
@@ -50,8 +54,8 @@ namespace Presentation_Layer.Controllers
         public IActionResult Delete(int id)
         {
             Post p = new Post();
-            p = postContainer.GetById(id);
-            postContainer.Delete(p);
+            p = Container.GetById(id);
+            Container.Delete(p);
             return RedirectToAction("Index");
         }
 

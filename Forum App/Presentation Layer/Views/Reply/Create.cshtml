@@ -1,0 +1,17 @@
+﻿@model Presentation_Layer.ViewModels.ReplyDetailVM
+
+<div id="">
+    <h1> Leave a reply </h1>
+    <form asp-action="Create">
+        <div class="formulierRij">
+            <div class="formulier-half">
+                <p><label asp-for="ReplyContent"></label></p>
+                <input asp-for="ReplyContent" />
+                <span asp-validation-for="ReplyContent"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <input type="submit" value="Opslaan" />
+        </div>
+    </form>
+</div>

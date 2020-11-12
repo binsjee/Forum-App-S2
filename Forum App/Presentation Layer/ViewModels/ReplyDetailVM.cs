@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Database_Layer.DTO_s
+namespace Presentation_Layer.ViewModels
 {
-    public class ReplyDTO
+    public class ReplyDetailVM
     {
         public int Id { get; set; }
         public string ReplyContent { get; set; }
