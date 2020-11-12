@@ -47,5 +47,13 @@ namespace Presentation_Layer.Controllers
             return View(vm);
         }
 
+        public IActionResult Delete(int id)
+        {
+            Post p = new Post();
+            p = postContainer.GetById(id);
+            postContainer.Delete(p);
+            return RedirectToAction("Index");
+        }
+
     }
 }

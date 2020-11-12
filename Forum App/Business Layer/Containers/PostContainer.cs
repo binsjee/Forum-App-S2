@@ -42,5 +42,11 @@ namespace Forum_App.Containers
             post = converter.DtoToModel(dto);
             return post;
         }
+        public void Delete(Post post)
+        {
+            PostDTO dto = new PostDTO();
+            dto = converter.ModelToDTO(post);
+            context.Delete(dto);
+        }
     }
 }

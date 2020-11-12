@@ -6,6 +6,7 @@
 }
 
 <body>
+    <a asp-area="" asp-controller="Post"></a>
     <div id="">
         <table class="table table-striped table-hover">
             <h1> All posts </h1>
@@ -28,6 +29,9 @@
                     </td>
                     <td>
                     @Html.DisplayFor(modelItem => item.PostTime)
+                    </td>
+                    <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id})
                     </td>
                     </tr>
                 }

@@ -29,8 +29,10 @@ namespace Business_Layer.DTOConverters
         {
             Post post = new Post()
             {
+                Id = dto.Id,
                 Title = dto.Title,
-                PostContent = dto.PostContent
+                PostContent = dto.PostContent,
+                PostTime = dto.PostTime,
             };
             return post;
         }
@@ -52,8 +54,10 @@ namespace Business_Layer.DTOConverters
         {
             PostDTO dto = new PostDTO()
             {
+                Id = model.Id,
                 Title = model.Title,
-                PostContent = model.PostContent
+                PostContent = model.PostContent,
+                PostTime = model.PostTime,
             };
             return dto;
         }

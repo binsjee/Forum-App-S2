@@ -18,6 +18,24 @@ namespace DatabaseLayer.Contexts
         {
 
         }
+
+        public void Delete(PostDTO dto)
+        {
+            try
+            {
+                string sql = "DELETE FROM Post WHERE ID = @ID";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>
+                {
+                    new KeyValuePair<string, string>("ID", dto.Id.ToString())
+                };
+                ExecuteSql(sql, parameters);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public List<PostDTO> GetAll()
         {
             List<PostDTO> posts = new List<PostDTO>();

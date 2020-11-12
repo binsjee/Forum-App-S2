@@ -9,5 +9,6 @@ namespace DatabaseLayer.Interfaces
     public interface IPostContext : IGenericQueries<PostDTO>
     {
         long Insert(PostDTO dto);
+        void Delete(PostDTO dto);
     }
 }

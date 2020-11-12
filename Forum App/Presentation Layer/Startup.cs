@@ -32,10 +32,18 @@ namespace Presentation_Layer
             //add contexts
             services.AddScoped<IAccountContext, SQLAccountContext>();
             services.AddScoped<IPostContext, SQLPostContext>();
+            services.AddScoped<IForumContext, SQLForumContext>();
+            services.AddScoped<IMessageContext, SQLMessageContext>();
+            services.AddScoped<IReplyContext, SQLReplyContext>();
 
             //add containers
             services.AddScoped<AccountContainer>();
             services.AddScoped<PostContainer>();
+            services.AddScoped<MessageContainer>();
+            services.AddScoped<ForumContainer>();
+            services.AddScoped<ReplyContainer>();
+
+            services.AddSession();
 
             //identity
             services.Configure<IdentityOptions>(options =>
@@ -83,7 +91,7 @@ namespace Presentation_Layer
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
 
