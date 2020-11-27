@@ -1,35 +1,36 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="col-md-12" style="margin-bottom: 30px;">
-    <div class="row justify-content-around">
-        <h1>Welkom bij het forum</h1>
-    </div>
-
-    <div class="welkomRij">
-        <div class="welkomRijContent">
-            <a asp-area="" asp-controller="Post" asp-action="Create"> <button>Create Post</button></a>
+<body>
+    <div class="col-md-12" style="margin-bottom: 30px;">
+        <div class="row justify-content-around">
+            <h1>Welkom bij het forum</h1>
         </div>
-    </div>
 
-    <div class="welkomRij">
-        <div class="welkomRijContent">
-            <a asp-area="" asp-controller="Account" asp-action="Login"> <button>Login</button></a>
+        <div class="welkomRij">
+            <div class="welkomRijContent">
+                <a asp-area="" asp-controller="Post" asp-action="Create"> <button>Create Post</button></a>
+            </div>
         </div>
-    </div>
 
-    <div class="welkomRij">
-        <div class="welkomRijContent">
-            <a asp-area="" asp-controller="Account" asp-action="Register"> <button>Register</button></a>
+        <div class="welkomRij">
+            <div class="welkomRijContent">
+                <a asp-area="" asp-controller="Login" asp-action="Index"> <button>Login</button></a>
+            </div>
         </div>
-    </div>
 
-    <div class="welkomRij">
-        <div class="welkomRijContent">
-            <a asp-area="" asp-controller="Post" asp-action="Index"> <button>View Posts</button></a>
+        <div class="welkomRij">
+            <div class="welkomRijContent">
+                <a asp-area="" asp-controller="Account" asp-action="Register"> <button>Register</button></a>
+            </div>
         </div>
+
+        <div class="welkomRij">
+            <div class="welkomRijContent">
+                <a asp-area="" asp-controller="Post" asp-action="Index"> <button>View Posts</button></a>
+            </div>
+        </div>
+
+
     </div>
-
-
-</div>
+</body>

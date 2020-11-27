@@ -105,3 +105,11 @@ B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcorea
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Post\Detail.cshtml.g.cs
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Reply\Create.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Account\Index.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Post\Create.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Post\Detail.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Reply\Create.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs

@@ -45,5 +45,9 @@ namespace Presentation_Layer.Controllers
             ViewBag.Message = $"Your username is {username} and password is {password} ";
             return RedirectToAction("Login", "Account");
         }
+        public IActionResult Index()
+        {
+            return View();
+        }
     }
 }

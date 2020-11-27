@@ -1,0 +1,46 @@
+﻿html{
+    height: 100%;
+}
+body {
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    display: flex;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgba(81,85,89,0.9668242296918768) 46%, rgba(0,212,255,1) 89%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+#LoginBox {
+    color: white;
+    margin-top: 12.5%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+#LoginForm {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.InputBox {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 30%;
+}
+.LoginButton {
+    background-color: white;
+    border-radius: 5%;
+    color: #376a6e;
+    width: 25%;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+    padding-left: 7px;
+}
+.BigText {
+    font-size: 74px;
+}
