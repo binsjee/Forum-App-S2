@@ -13,6 +13,5 @@ B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\bin\Debug\netcoreapp3.
 B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\obj\Debug\netcoreapp3.1\Database Layer.csprojAssemblyReference.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\obj\Debug\netcoreapp3.1\Database Layer.AssemblyInfoInputs.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\obj\Debug\netcoreapp3.1\Database Layer.AssemblyInfo.cs
-B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\obj\Debug\netcoreapp3.1\Database Layer.csproj.CoreCompileInputs.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\obj\Debug\netcoreapp3.1\Database Layer.dll
 B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\obj\Debug\netcoreapp3.1\Database Layer.pdb

@@ -18,7 +18,6 @@ B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\bin\Debug\netcoreapp3.
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csprojAssemblyReference.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.AssemblyInfoInputs.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.AssemblyInfo.cs
-B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csproj.CoreCompileInputs.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csproj.CopyComplete
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.dll
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.pdb

@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace Presentation_Layer
 {
@@ -44,6 +45,10 @@ namespace Presentation_Layer
             services.AddScoped<ReplyContainer>();
 
             services.AddSession();
+            services.AddLogging(LoggingBuilder =>
+            {
+                LoggingBuilder.AddFile("app.log", append: true);
+            });
 
             //identity
             services.Configure<IdentityOptions>(options =>

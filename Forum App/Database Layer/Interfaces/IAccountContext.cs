@@ -10,5 +10,6 @@ namespace DatabaseLayer.Interfaces
     {
         bool Update(AccountDTO a);
         long Insert(AccountDTO dto);
+        AccountDTO GetByName(AccountDTO dto);
     }
 }

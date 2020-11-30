@@ -12,8 +12,6 @@ B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\bin\Debug\netcorea
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.csprojAssemblyReference.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.AssemblyInfoInputs.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.AssemblyInfo.cs
-B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.csproj.CoreCompileInputs.cache
-B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.MvcApplicationPartsAssemblyInfo.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.RazorAssemblyInfo.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.RazorAssemblyInfo.cs
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.TagHelpers.input.cache
@@ -113,3 +111,6 @@ C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Reply\Create.cshtml.g.cs
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\NReco.Logging.File.dll

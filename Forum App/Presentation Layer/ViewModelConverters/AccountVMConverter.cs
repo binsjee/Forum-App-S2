@@ -19,11 +19,13 @@ namespace Presentation_Layer.ViewModelConverters
         {
             AccountDetailVM vm = new AccountDetailVM()
             {
+                Id = model.Id,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Email = model.Email,
                 Password = model.Password,
-                Username = model.Username
+                Username = model.Username,
+                Administrator = model.Administrator,
             };
             return vm;
         }
@@ -37,11 +39,13 @@ namespace Presentation_Layer.ViewModelConverters
         {
             Account account = new Account()
             {
+                Id = viewmodel.Id,
                 FirstName = viewmodel.FirstName,
                 LastName = viewmodel.LastName,
                 Email = viewmodel.Email,
                 Password = viewmodel.Password,
-                Username = viewmodel.Username
+                Username = viewmodel.Username,
+                Administrator = viewmodel.Administrator,
             };
             return account;
         }

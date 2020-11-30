@@ -18,11 +18,13 @@ namespace Business_Layer.DTOConverters
         {
             Account account = new Account()
             {
+                Id = dto.Id,
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
                 Email = dto.Email,
                 Password = dto.Password,
-                Username = dto.Username
+                Username = dto.Username,
+                Administrator = dto.Administrator,
             };
             return account;
         }
@@ -36,11 +38,13 @@ namespace Business_Layer.DTOConverters
         {
             AccountDTO dto = new AccountDTO()
             {
+                Id = model.Id,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Email = model.Email,
                 Password = model.Password,
-                Username = model.Username
+                Username = model.Username,
+                Administrator = model.Administrator,
             };
             return dto;
         }

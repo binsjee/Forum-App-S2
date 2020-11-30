@@ -3,16 +3,21 @@ using DatabaseLayer.Interfaces;
 using DatabaseLayer.Parsers;
 using Forum_App.Contexts;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.VisualBasic.CompilerServices;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Net.Http;
-using System.Runtime.InteropServices.ComTypes;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Schema;
+using System.IO;
+using Newtonsoft.Json;
+//using System.Linq;
+//using System.Net.Http;
+//using System.Runtime.InteropServices.ComTypes;
+//using System.Threading.Tasks;
+//using System.Xml;
+//using System.Xml.Schema;
+
+using System.Text;
 
 namespace DatabaseLayer.Contexts
 {
@@ -22,7 +27,6 @@ namespace DatabaseLayer.Contexts
         {
 
         }
-
         public List<AccountDTO> GetAll()
         {
             List<AccountDTO> accountList = new List<AccountDTO>();
@@ -38,7 +42,7 @@ namespace DatabaseLayer.Contexts
                 }
                 return accountList;
             }
-            catch
+            catch(Exception e)
             {
                 throw;
             }
@@ -106,6 +110,28 @@ namespace DatabaseLayer.Contexts
                 
                 return true;
                 
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public AccountDTO GetByName(AccountDTO dto)
+        {
+            try
+            {
+                string sql = "SELECT * FROM Account WHERE Username = @Username AND Password = @Password";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
+                {
+                    new KeyValuePair<string, string>("Username", dto.Username),
+                    new KeyValuePair<string, string>("Password", dto.Password),
+                };
+
+                DataSet results = ExecuteSql(sql, parameters);
+                AccountDTO a = DataSetParser.DataSetToAccount(results, 0);
+                int b = a.Id;
+                return a;
             }
             catch(Exception e)
             {

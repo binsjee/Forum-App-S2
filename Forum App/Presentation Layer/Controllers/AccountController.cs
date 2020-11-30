@@ -9,6 +9,7 @@ using Presentation_Layer.ViewModelConverters;
 using Presentation_Layer.ViewModels;
 using Presentation_Layer;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace Presentation_Layer.Controllers
 {
@@ -47,7 +48,14 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            if(HttpContext.Session.GetInt32("User") != null)
+            {
+                AccountDetailVM user = new AccountDetailVM();
+                user = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
+                ViewData["Username"] = user.Username;
+                return View();
+            }
+            return RedirectToAction("Index", "Login");
         }
     }
 }
