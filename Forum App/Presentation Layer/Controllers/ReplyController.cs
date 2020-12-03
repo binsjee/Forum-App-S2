@@ -4,7 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Forum_App.Containers;
 using Forum_App.Models.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
+using Newtonsoft.Json;
 using Presentation_Layer.ViewModelConverters;
 using Presentation_Layer.ViewModels;
 
@@ -28,9 +31,20 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult Create(ReplyDetailVM vm)
         {
-            Reply reply = vmconverter.ViewModelToModel(vm);
-            replyContainer.Insert(reply);
-            return RedirectToAction("Detail", "Post");
+            if (HttpContext.Session.GetInt32("User") != null)
+            {
+                Reply reply = vmconverter.ViewModelToModel(vm);
+                Account account = new Account();
+                account = JsonConvert.DeserializeObject<Account>(HttpContext.Session.GetString("User"));
+                int accountID = account.Id;
+                int postID = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("Id"));
+                reply.PostId = postID;
+                reply.AccountId = accountID;
+                replyContainer.Insert(reply);
+                //return RedirectToAction("Detail", new RouteValueDictionary(new { controller = "Post", action = "Detail", Id = postID }));
+                return Redirect("~/Post/Detail/?postID=" + postID);
+            }
+            return RedirectToAction("Index", "Login");
         }
         public IActionResult ShowReplies()
         {
@@ -40,9 +54,20 @@ namespace Presentation_Layer.Controllers
             vm.replyVMS = vmconverter.ModelsToViewModels(replies);
             return View(vm);
         }
-        public IActionResult LeaveReply()
+        public IActionResult LeaveReply(int postID)
         {
-            return View("Create");
+            ReplyDetailVM vm = new ReplyDetailVM();
+            vm.PostId = postID;
+            if (HttpContext.Session.GetInt32("User") != null)
+            {
+                return View("Create");
+            }
+            return RedirectToAction("Index", "Login");
         }
+        //public IActionResult Delete(int id)
+        //{
+        //    Reply r = new Reply();
+        //    r = replyContainer.Delete
+        //}
     }
 }

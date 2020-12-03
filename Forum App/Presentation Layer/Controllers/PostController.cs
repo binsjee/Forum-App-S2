@@ -8,6 +8,8 @@ using Forum_App.Models.Data;
 using Presentation_Layer.ViewModels;
 using Forum_App.Containers;
 using Presentation_Layer.ViewModelConverters;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace Presentation_Layer.Controllers
 {
@@ -15,13 +17,13 @@ namespace Presentation_Layer.Controllers
     {
         private readonly PostVMConverter vmconverter = new PostVMConverter();
         private readonly PostContainer Container;
-        //private readonly ReplyVMConverter replyvmconverter = new ReplyVMConverter();
-        //private readonly ReplyContainer replyContainer;
+        private readonly ReplyVMConverter replyvmconverter = new ReplyVMConverter();
+        private readonly ReplyContainer replyContainer;
 
         public PostController(PostContainer postcontainer, ReplyContainer replycontainer)
         {
             this.Container = postcontainer;
-            //this.replyContainer = replycontainer;
+            this.replyContainer = replycontainer;
         }
         public IActionResult Index()
         {
@@ -39,14 +41,20 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult CreatePost(PostDetailVM vm)
         {
-            Post post = vmconverter.ViewModelToModel(vm);
-            Container.Insert(post);
-            return RedirectToAction("Index");
+            if (HttpContext.Session.GetInt32("User") != null)
+            {
+                Post post = vmconverter.ViewModelToModel(vm);
+                Container.Insert(post);
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index", "Login");
         }
-        public IActionResult Detail(int id)
+        public IActionResult Detail(int postID)
         {
             PostDetailVM vm = new PostDetailVM();
-            Post post = Container.GetById(id);
+            Post post = Container.GetById(postID);
+            post.Replies = replyContainer.GetAll();
+            HttpContext.Session.SetString("Id", JsonConvert.SerializeObject(post.Id));
             vm = vmconverter.ModelToViewModel(post);
             return View(vm);
         }

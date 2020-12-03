@@ -22,7 +22,7 @@
                 {
                     <tr>
                     <td>
-                    @Html.ActionLink(item.Title, "Detail", new { id = item.Id})
+                    @Html.ActionLink(item.Title, "Detail", new { postID = item.Id})
                     </td>
                     <td>
                     @Html.DisplayFor(modelItem => item.PostContent)

@@ -12,37 +12,45 @@
     </div>
 </div>
 <a asp-area="" asp-controller="Reply" asp-action="ShowReplies"></a>
-<div id="">
-    <table class="table table-striped table-hover">
-        <h1>Replies</h1>
-        <thead>
-            <tr>
-                <th>User</th>
-                <th>Content</th>
-                <th>Reaction Time</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (ReplyDetailVM item in Model.Replies)
-            {
+<div id="table-wrapper">
+    <div id="table-scroll">
+        <table class="table table-striped table-hover">
+            <h1>Replies</h1>
+            <thead>
                 <tr>
-                    <td>
-                        @Html.ActionLink(item.AccountId.ToString(), "Detail", "Reply", new { id = item.Id })
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ReplyContent)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ReactionTime)
-                    </td>
+                    <th>User</th>
+                    <th>Content</th>
+                    <th>Reaction Time</th>
                 </tr>
-            }
-        </tbody>
+            </thead>
+            <tbody>
+                @foreach (ReplyDetailVM item in Model.Replies)
+                {
+                    @if (item.PostId == Model.Id)
+                    {
+                        <tr>
+                            <td>
+                                @Html.ActionLink(item.AccountId.ToString(), "Detail", "Reply", new { id = item.Id })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ReplyContent)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ReactionTime)
+                            </td>
+                            <td>
+                                <a asp-area="" asp-controller="Reply" asp-action="Delete"> <button>Delete</button></a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
 
-    </table>
-    <div class="welkomRij">
-        <div class="welkomRijContent">
-            <a asp-area="" asp-controller="Reply" asp-action="LeaveReply"> <button>Leave Reply</button></a>
+        </table>
+        <div class="welkomRij">
+            <div class="welkomRijContent">
+                <a asp-area="" asp-controller="Reply" asp-action="LeaveReply" asp-route-postID="@Model.Id"> <button>Leave Reply</button></a>
+            </div>
         </div>
     </div>
 </div>

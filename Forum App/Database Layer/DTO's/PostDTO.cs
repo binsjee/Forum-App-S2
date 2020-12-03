@@ -11,11 +11,10 @@ namespace Database_Layer.DTO_s
         public string Title { get; set; }
         public string PostContent { get; set; }
         public DateTime PostTime { get; set; }
-        public long postNumber { get; set; }
         public int AccountId { get; set; }
 
         public ForumDTO Forum { get; set; }
-        public IEnumerable<ReplyDTO> Replies { get; set; }
+        public List<ReplyDTO> Replies { get; set; }
         public PostDTO(int id)
         {
             Id = id;

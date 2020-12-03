@@ -15,6 +15,6 @@ namespace Forum_App.Models.Data
         public int AccountId { get; set; }
 
         public Forum Forum { get; set; }
-        public IEnumerable<Reply> Replies { get; set; }
+        public List<Reply> Replies { get; set; }
     }
 }

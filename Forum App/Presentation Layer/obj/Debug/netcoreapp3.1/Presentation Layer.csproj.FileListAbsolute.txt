@@ -114,3 +114,7 @@ C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\NReco.Logging.File.dll
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\bin\Debug\netcoreapp3.1\Microsoft.Docs.Samples.RouteInfo.dll
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.csproj.CoreCompileInputs.cache
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.MvcApplicationPartsAssemblyInfo.cs
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.MvcApplicationPartsAssemblyInfo.cache

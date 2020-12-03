@@ -40,5 +40,23 @@ namespace DatabaseLayer.Parsers
                 return new PostDTO();
             }
         }
+        public static ReplyDTO DataSetToReply(DataSet set, int rowIndex)
+        {
+            if(set.Tables[0].Rows.Count > 0)
+            {
+                return new ReplyDTO((int)set.Tables[0].Rows[rowIndex][0])
+                {
+                    ReplyContent = (string)set.Tables[0].Rows[rowIndex][1],
+                    Pinned = (bool)set.Tables[0].Rows[rowIndex][2],
+                    ReactionTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
+                    PostId = (int)set.Tables[0].Rows[rowIndex][4],
+                    AccountId = (int)set.Tables[0].Rows[rowIndex][5],
+                };
+            }
+            else
+            {
+                return new ReplyDTO();
+            }
+        }
     }
 }

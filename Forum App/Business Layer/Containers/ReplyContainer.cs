@@ -31,5 +31,11 @@ namespace Forum_App.Containers
             replies = converter.DTOsToModels(DTOs);
             return replies;
         }
+        public void Delete(Reply reply)
+        {
+            ReplyDTO dto = new ReplyDTO();
+            dto = converter.ModelToDTO(reply);
+            context.Delete(dto);
+        }
     }
 }

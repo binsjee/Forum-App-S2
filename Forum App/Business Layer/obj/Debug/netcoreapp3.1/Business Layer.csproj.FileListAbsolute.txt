@@ -21,3 +21,4 @@ B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csproj.CopyComplete
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.dll
 B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.pdb
+B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\obj\Debug\netcoreapp3.1\Business Layer.csproj.CoreCompileInputs.cache

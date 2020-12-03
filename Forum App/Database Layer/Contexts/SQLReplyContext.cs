@@ -18,21 +18,43 @@ namespace DatabaseLayer.Contexts
         {
 
         }
+
+        public void Delete(ReplyDTO dto)
+        {
+            try
+            {
+                string sql = "DELETE FROM Reply WHERE ID = @ID";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
+                {
+                    new KeyValuePair<string, string>("ID", dto.Id.ToString())
+                };
+                ExecuteSql(sql, parameters);
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+        }
+
         public List<ReplyDTO> GetAll()
         {
-            //List<ReplyDTO> replies = new List<ReplyDTO>();
-            //try
-            //{
-            //    string sql = "SELECT ID, ReplyContent, Pinned, ReactionTime, PostID, AccountID FROM Reply";
-            //    DataSet results = ExecuteSql(sql, new List<KeyValuePair<string, string>>());
+            List<ReplyDTO> replies = new List<ReplyDTO>();
+            try
+            {
+                string sql = "SELECT ID, ReplyContent, Pinned, ReactionTime, PostID, AccountID FROM Reply";
+                DataSet results = ExecuteSql(sql, new List<KeyValuePair<string, string>>());
 
-            //    for(int x = 0; x < results.Tables[0].Rows.Count; x++)
-            //    {
-            //        ReplyDTO dto = DataSetParser.DataSetToReply(results, x);
-
-            //    }
-            //}
-            throw new NotImplementedException();
+                for (int x = 0; x < results.Tables[0].Rows.Count; x++)
+                {
+                    ReplyDTO dto = DataSetParser.DataSetToReply(results, x);
+                    replies.Add(dto);
+                }
+                return replies;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
         public ReplyDTO GetById(int id)
@@ -44,12 +66,13 @@ namespace DatabaseLayer.Contexts
         {
             try
             {
-                string sql = "INSERT INTO Reply(ReplyContent, Pinned, ReactionTime, PostID, AccountID) OUTPUT INSERTED.ID VALUES(@ReplyContent, @pinned, CURRENT_TIMESTAMP, 0, 0)";
+                string sql = "INSERT INTO Reply(ReplyContent, Pinned, ReactionTime, PostID, AccountID) OUTPUT INSERTED.ID VALUES(@ReplyContent, @pinned, CURRENT_TIMESTAMP, @PostId, @AccountID)";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("ReplyContent", dto.ReplyContent),
                     new KeyValuePair<string, string>("Pinned", dto.Pinned.ToString()),
-                    //new KeyValuePair<string, string>("PostID", dto.PostId.ToString())
+                    new KeyValuePair<string, string>("PostID", dto.PostId.ToString()),
+                    new KeyValuePair<string, string>("AccountID", dto.AccountId.ToString()),
 
                 };
                 int result = ExecuteInsert(sql, parameters);
