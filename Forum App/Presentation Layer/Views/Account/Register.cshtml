@@ -18,14 +18,14 @@
         <div class="formulierRij">
             <div class="formulierRijContent">
                 <p><label asp-for="Email"></label></p>
-                <input asp-for="Email" inputmode="email"/>
+                <input asp-for="Email" inputmode="email" type="email"/>
                 <span asp-validation-for="Email"></span>
             </div>
         </div>
         <div class="formulierRij">
             <div class="formulierRijContent">
                 <p><label asp-for="Password"></label></p>
-                <input asp-for="Password" />
+                <input asp-for="Password" type="password"/>
                 <span asp-validation-for="Password"></span>
             </div>
         </div>

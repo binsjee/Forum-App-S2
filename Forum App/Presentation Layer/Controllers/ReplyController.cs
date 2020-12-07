@@ -66,11 +66,21 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult Delete(int id)
         {
-            Reply r = new Reply();
-            r = replyContainer.GetById(id);
-            replyContainer.Delete(r);
-            int postID = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("Id"));
-            return Redirect("~/Post/Detail/?postID=" + postID);
+            if (HttpContext.Session.GetInt32("User") != null)
+            {
+                Account account = new Account();
+                account = JsonConvert.DeserializeObject<Account>(HttpContext.Session.GetString("User"));
+                if (account.Administrator)
+                {
+                    Reply r = new Reply();
+                    r = replyContainer.GetById(id);
+                    replyContainer.Delete(r);
+                    int postID = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("Id"));
+                    return Redirect("~/Post/Detail/?postID=" + postID);
+                }
+                return RedirectToAction("Index", "Login");
+            }
+            return RedirectToAction("Index", "Login");
         }
     }
 }

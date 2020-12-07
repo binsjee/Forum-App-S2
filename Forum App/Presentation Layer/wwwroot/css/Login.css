@@ -1,4 +1,11 @@
-﻿html{
+﻿input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #fff !important;
+}
+html{
     height: 100%;
 }
 body {
@@ -11,7 +18,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
+
 }
+
 #LoginBox {
     color: white;
     margin-top: 12.5%;
