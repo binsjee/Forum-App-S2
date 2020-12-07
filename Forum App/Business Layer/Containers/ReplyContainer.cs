@@ -37,5 +37,13 @@ namespace Forum_App.Containers
             dto = converter.ModelToDTO(reply);
             context.Delete(dto);
         }
+        public Reply GetById(int id)
+        {
+            Reply reply = new Reply();
+            ReplyDTO dto = new ReplyDTO();
+            dto = context.GetById(id);
+            reply = converter.DtoToModel(dto);
+            return reply;
+        }
     }
 }

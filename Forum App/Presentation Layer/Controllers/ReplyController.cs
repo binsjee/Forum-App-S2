@@ -64,10 +64,13 @@ namespace Presentation_Layer.Controllers
             }
             return RedirectToAction("Index", "Login");
         }
-        //public IActionResult Delete(int id)
-        //{
-        //    Reply r = new Reply();
-        //    r = replyContainer.Delete
-        //}
+        public IActionResult Delete(int id)
+        {
+            Reply r = new Reply();
+            r = replyContainer.GetById(id);
+            replyContainer.Delete(r);
+            int postID = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("Id"));
+            return Redirect("~/Post/Detail/?postID=" + postID);
+        }
     }
 }

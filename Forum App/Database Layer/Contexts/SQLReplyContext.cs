@@ -59,7 +59,21 @@ namespace DatabaseLayer.Contexts
 
         public ReplyDTO GetById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string sql = "SELECT ID, ReplyContent, Pinned, ReactionTime, PostID, AccountID FROM Reply WHERE ID = @ID";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
+                {
+                    new KeyValuePair<string, string>("ID", id.ToString()),
+                };
+                DataSet results = ExecuteSql(sql, parameters);
+                ReplyDTO dto = DataSetParser.DataSetToReply(results, 0);
+                return dto;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
         public long Insert(ReplyDTO dto)

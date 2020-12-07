@@ -146,7 +146,7 @@ html{
 
 body{ 
     height: 100%;
-    overflow-y:scroll;
+    overflow: hidden;
     margin: 0px;
     display: flex;
     box-sizing: border-box;
@@ -199,13 +199,13 @@ ul{
 
 .bottom {
     flex-grow: 1;
-    overflow-y: visible; 
+    overflow: hidden; 
 }
 
 .bottomLeft {
     position: relative;
     bottom: 0px;
-    overflow-y: visible;
+    overflow: hidden;
 }
 #profile {
     padding-top: 13px;
@@ -225,11 +225,11 @@ ul{
 #table-wrapper {
     position: relative;
     height: auto;
-    overflow:scroll;
+    overflow:hidden;
 }
 
 #table-scroll {
-    height: 150px;
+    height: 100%;
     overflow: scroll;
     margin-top: 20px;
 }
@@ -239,8 +239,8 @@ ul{
 }
 
     #table-wrapper table * {
-        background: yellow;
-        color: black;
+        /*background: yellow;
+        color: black;*/
     }
 
     #table-wrapper table thead th .text {
