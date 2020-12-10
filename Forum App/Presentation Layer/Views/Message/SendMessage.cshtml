@@ -1,0 +1,34 @@
+﻿@model Tuple<Presentation_Layer.ViewModels.MessageDetailVM, List<Presentation_Layer.ViewModels.AccountDetailVM>>
+
+<div id="">
+    <h1>Create a message</h1>
+    <form asp-controller="Message" asp-action="SendMessage" method="post">
+        <div class="formulierRij">
+            <div class="formulier-half">
+                <p><label asp-for="@Model.Item1.Title"></label></p>
+                <input asp-for="@Model.Item1.Title" />
+                <span asp-validation-for="@Model.Item1.Title"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <div class="formulier-half">
+                <p><label asp-for="@Model.Item1.MessageContent"></label></p>
+                <input asp-for="@Model.Item1.MessageContent" />
+                <span asp-validation-for="@Model.Item1.MessageContent"></span>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <div class="formulier-half">
+                Receiver<select asp-for="@Model.Item1.ReceiverId" name="ReceiverId">
+                @foreach(Presentation_Layer.ViewModels.AccountDetailVM account in Model.Item2)
+                {
+                    <option value="@account.Id"></option>
+                }
+                </select>
+            </div>
+        </div>
+        <div class="formulierRij">
+            <input type="submit" value="Opslaan" />
+        </div>
+    </form>
+</div>

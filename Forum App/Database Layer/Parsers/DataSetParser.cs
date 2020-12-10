@@ -58,5 +58,23 @@ namespace DatabaseLayer.Parsers
                 return new ReplyDTO();
             }
         }
+        public static MessageDTO DataSetToMessage(DataSet set, int rowIndex)
+        {
+            if(set.Tables[0].Rows.Count > 0)
+            {
+                return new MessageDTO((int)set.Tables[0].Rows[rowIndex][0])
+                {
+                    Title = (string)set.Tables[0].Rows[rowIndex][1],
+                    MessageContent = (string)set.Tables[0].Rows[rowIndex][2],
+                    MessageTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
+                    SenderId = (int)set.Tables[0].Rows[rowIndex][4],
+                    ReceiverId = (int)set.Tables[0].Rows[rowIndex][5],
+                };
+            }
+            else
+            {
+                return new MessageDTO();
+            }
+        }
     }
 }

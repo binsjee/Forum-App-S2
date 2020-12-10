@@ -1,0 +1,25 @@
+﻿<body>
+    <div class="col-md-12" style="margin-bottom: 30px;">
+        <div class="row justify-content-around">
+            <h1>View your messages</h1>
+        </div>
+
+        <div class="welkomRij">
+            <div class="welkomRijContent">
+                <a asp-area="" asp-controller="Message" asp-action="SentMessages"> <button>Sent Messages</button></a>
+            </div>
+        </div>
+
+        <div class="welkomRij">
+            <div class="welkomRijContent">
+                <a asp-area="" asp-controller="Message" asp-action="ReceivedMessages"> <button>Received Messages</button></a>
+            </div>
+        </div>
+
+        <div class="welkomRij">
+            <div class="welkomRijContent">
+                <a asp-area="" asp-controller="Message" asp-action="SendMessage"> <button>Send Message</button></a>
+            </div>
+        </div>
+    </div>
+</body>

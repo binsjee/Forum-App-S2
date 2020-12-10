@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Presentation_Layer.ViewModels
+{
+    public class MessageViewModel
+    {
+        public List<MessageDetailVM> Messages { get; set; } = new List<MessageDetailVM>();
+        public List<AccountDetailVM> Accounts { get; set; } = new List<AccountDetailVM>();
+    }
+}

@@ -52,8 +52,7 @@ namespace Presentation_Layer.Controllers
             {
                 AccountDetailVM user = new AccountDetailVM();
                 user = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
-                ViewData["Username"] = user.Username;
-                return View();
+                return View(user);
             }
             return RedirectToAction("Index", "Login");
         }

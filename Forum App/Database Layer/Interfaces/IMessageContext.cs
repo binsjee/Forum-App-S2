@@ -8,5 +8,8 @@ namespace DatabaseLayer.Interfaces
 {
     public interface IMessageContext : IGenericQueries<MessageDTO>
     {
+        List<MessageDTO> GetAllBySender(int id);
+        List<MessageDTO> GetAllByReceiver(int id);
+        long Insert(MessageDTO dto);
     }
 }

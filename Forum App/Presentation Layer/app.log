@@ -227,3 +227,134 @@
 2020-12-07T09:41:57.3915723+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
 2020-12-07T09:41:57.3974249+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
 2020-12-07T09:41:57.3994489+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T09:40:59.2800390+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T09:40:59.2896502+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T09:40:59.3938530+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T09:57:59.0450416+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T09:57:59.0679963+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T09:57:59.0706059+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T09:59:09.6586513+01:00	FAIL	[Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]	[UnhandledException]	An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Account_Index.<ExecuteAsync>b__19_3() in B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\Views\Account\Index.cshtml:line 13
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_Account_Index.<ExecuteAsync>b__19_1()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Account_Index.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2020-12-10T09:59:09.6586905+01:00	FAIL	[Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]	[UnhandledException]	An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Account_Index.<ExecuteAsync>b__19_3() in B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\Views\Account\Index.cshtml:line 13
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_Account_Index.<ExecuteAsync>b__19_1()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Account_Index.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2020-12-10T10:00:12.5608733+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T10:00:12.5684532+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T10:00:12.5712994+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T10:00:58.2603448+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T10:00:58.3188564+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T10:00:58.3340906+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T10:01:23.3896891+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T10:01:23.3982533+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T10:01:23.4003093+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T10:03:04.1643125+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T10:03:04.1731409+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T10:03:04.1758964+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T10:04:03.2318217+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T10:04:03.2381166+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T10:04:03.2415191+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T14:15:18.7458226+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T14:15:18.7528294+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T14:15:18.7566438+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T14:15:18.8986609+01:00	WARN	[Microsoft.AspNetCore.Session.SessionMiddleware]	[ErrorUnprotectingCookie]	Error unprotecting the session cookie.System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+
+2020-12-10T14:15:50.9649843+01:00	WARN	[Microsoft.AspNetCore.Session.SessionMiddleware]	[ErrorUnprotectingCookie]	Error unprotecting the session cookie.System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+
+2020-12-10T14:15:54.0608440+01:00	WARN	[Microsoft.AspNetCore.Session.SessionMiddleware]	[ErrorUnprotectingCookie]	Error unprotecting the session cookie.System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+
+2020-12-10T14:49:29.7511297+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T14:49:29.8868156+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T14:49:29.9036192+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T14:50:21.1426907+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T14:50:21.1485969+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T14:50:21.1512625+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T14:57:52.3933243+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T14:57:52.4000554+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T14:57:52.4023366+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T14:59:32.8315331+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T14:59:32.8382752+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T14:59:32.8409356+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-10T14:59:56.5781966+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-10T14:59:56.5873405+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-10T14:59:56.5916214+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer

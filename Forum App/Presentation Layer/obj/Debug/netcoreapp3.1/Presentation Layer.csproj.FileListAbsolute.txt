@@ -118,3 +118,7 @@ B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\bin\Debug\netcorea
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.csproj.CoreCompileInputs.cache
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.MvcApplicationPartsAssemblyInfo.cs
 B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Presentation Layer.MvcApplicationPartsAssemblyInfo.cache
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Message\Index.cshtml.g.cs
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Message\ReceivedMessages.cshtml.g.cs
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Message\SendMessage.cshtml.g.cs
+B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Message\SentMessages.cshtml.g.cs

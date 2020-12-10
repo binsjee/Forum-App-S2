@@ -1,7 +1,54 @@
 ﻿@model Presentation_Layer.ViewModels.AccountDetailVM
 
-<div class="col-md-12" style="margin-bottom: 30px;">
-    <div class="row justify-content-around">
-        <h1>Welkom bij het forum, @ViewData["Username"]</h1>
+<head>
+    <link rel="stylesheet" href="~/css/Profile.css"/>
+</head>
+<body>
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            @Model.Username
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div><a asp-area="" asp-controller="Message" asp-action="Index" class="btn btn-danger">View Messages</a></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>
+                                        Name
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.FirstName, @Model.LastName</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>
+                                        @Model.Email
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-</div>
+</body>

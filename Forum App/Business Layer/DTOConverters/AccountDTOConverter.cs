@@ -11,7 +11,20 @@ namespace Business_Layer.DTOConverters
     {
         public List<Account> DTOsToModels(List<AccountDTO> DTOs)
         {
-            throw new NotImplementedException();
+            List<Account> accounts = new List<Account>();
+            foreach(AccountDTO dto in DTOs)
+            {
+                Account account = new Account();
+                account.Id = dto.Id;
+                account.FirstName = dto.FirstName;
+                account.LastName = dto.LastName;
+                account.Email = dto.Email;
+                account.Password = dto.Password;
+                account.Username = dto.Username;
+                account.Administrator = dto.Administrator;
+                accounts.Add(account);
+            }
+            return accounts;
         }
 
         public Account DtoToModel(AccountDTO dto)
@@ -31,7 +44,20 @@ namespace Business_Layer.DTOConverters
 
         public List<AccountDTO> ModelsToDTOs(List<Account> models)
         {
-            throw new NotImplementedException();
+            List<AccountDTO> DTOs = new List<AccountDTO>();
+            foreach (Account account in models)
+            {
+                AccountDTO dto = new AccountDTO();
+                dto.Id = account.Id;
+                dto.FirstName = account.FirstName;
+                dto.LastName = account.LastName;
+                dto.Email = account.Email;
+                dto.Password = account.Password;
+                dto.Username = account.Username;
+                dto.Administrator = account.Administrator;
+                DTOs.Add(dto);
+            }
+            return DTOs;
         }
 
         public AccountDTO ModelToDTO(Account model)

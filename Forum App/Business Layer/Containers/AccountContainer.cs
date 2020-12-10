@@ -31,5 +31,13 @@ namespace Forum_App.Containers
             dto = converter.ModelToDTO(account);
             return converter.DtoToModel(context.GetByName(dto));
         }
+        public List<Account> GetAll()
+        {
+            List<AccountDTO> DTOs = new List<AccountDTO>();
+            DTOs = context.GetAll();
+            List<Account> accounts = new List<Account>();
+            accounts = converter.DTOsToModels(DTOs);
+            return accounts;
+        }
     }
 }
