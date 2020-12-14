@@ -1,28 +1,29 @@
-﻿@model Tuple<Presentation_Layer.ViewModels.MessageDetailVM, List<Presentation_Layer.ViewModels.AccountDetailVM>>
+﻿@*@model Tuple<Presentation_Layer.ViewModels.MessageDetailVM, List<Presentation_Layer.ViewModels.AccountDetailVM>>*@
+@model Presentation_Layer.ViewModels.MessageDetailVM;
 
 <div id="">
     <h1>Create a message</h1>
     <form asp-controller="Message" asp-action="SendMessage" method="post">
         <div class="formulierRij">
             <div class="formulier-half">
-                <p><label asp-for="@Model.Item1.Title"></label></p>
-                <input asp-for="@Model.Item1.Title" />
-                <span asp-validation-for="@Model.Item1.Title"></span>
+                <p><label asp-for="@Model.Title"></label></p>
+                <input asp-for="@Model.Title" />
+                <span asp-validation-for="@Model.Title"></span>
             </div>
         </div>
         <div class="formulierRij">
             <div class="formulier-half">
-                <p><label asp-for="@Model.Item1.MessageContent"></label></p>
-                <input asp-for="@Model.Item1.MessageContent" />
-                <span asp-validation-for="@Model.Item1.MessageContent"></span>
+                <p><label asp-for="@Model.MessageContent"></label></p>
+                <input asp-for="@Model.MessageContent" />
+                <span asp-validation-for="@Model.MessageContent"></span>
             </div>
         </div>
         <div class="formulierRij">
             <div class="formulier-half">
-                Receiver<select asp-for="@Model.Item1.ReceiverId" name="ReceiverId">
-                @foreach(Presentation_Layer.ViewModels.AccountDetailVM account in Model.Item2)
+                Receiver<select asp-for="@Model.ReceiverId" name="ReceiverId">
+                @foreach(Presentation_Layer.ViewModels.AccountDetailVM account in Model.accounts)
                 {
-                    <option value="@account.Id"></option>
+                    <option value="@account.Id">@account.Username</option>
                 }
                 </select>
             </div>
