@@ -13,6 +13,7 @@ namespace Presentation_Layer.ViewModels
         public DateTime MessageTime { get; set; }
         public int SenderId { get; set; }
         public int ReceiverId { get; set; }
+        public List<AccountDetailVM> accounts { get; set; } = new List<AccountDetailVM>();
 
     }
 }

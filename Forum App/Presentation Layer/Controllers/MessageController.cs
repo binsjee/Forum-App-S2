@@ -67,13 +67,11 @@ namespace Presentation_Layer.Controllers
         public IActionResult SendMessage()
         {
             MessageDetailVM vm = new MessageDetailVM();
-            List<AccountDetailVM> accounts = new List<AccountDetailVM>();
-            foreach(Account account in accountContainer.GetAll())
+            foreach (Account account in accountContainer.GetAll())
             {
-                accounts.Add(accountVMConverter.ModelToViewModel(account));
+                vm.accounts.Add(accountVMConverter.ModelToViewModel(account));
             }
-            Tuple<MessageDetailVM, List<AccountDetailVM>> tupleData = new Tuple<MessageDetailVM, List<AccountDetailVM>>(vm, accounts);
-            return View(tupleData);
+            return View(vm);
         }
         [HttpPost]
         public IActionResult SendMessage(MessageDetailVM vm)

@@ -358,13 +358,52 @@
 2020-12-10T14:59:56.5781966+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
 2020-12-10T14:59:56.5873405+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
 2020-12-10T14:59:56.5916214+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
-2020-12-17T17:42:26.1679483+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
-2020-12-17T17:42:26.1805973+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
-2020-12-17T17:42:26.1821450+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer
-2020-12-17T17:42:49.3563600+01:00	FAIL	[Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]	[UnhandledException]	An unhandled exception has occurred while executing the request.System.IndexOutOfRangeException: There is no row at position 0.
-   at DatabaseLayer.Contexts.SQLAccountContext.GetByName(AccountDTO dto) in C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Database Layer\Contexts\SQLAccountContext.cs:line 138
-   at Forum_App.Containers.AccountContainer.GetByName(Account account) in C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Business Layer\Containers\AccountContainer.cs:line 32
-   at Presentation_Layer.Controllers.LoginController.Login(AccountDetailVM vm) in C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\Controllers\LoginController.cs:line 41
+2020-12-14T13:29:05.0991420+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-14T13:29:05.1188067+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-14T13:29:05.1230095+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-14T13:35:46.2204672+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-14T13:35:46.2273412+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-14T13:35:46.2310288+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-14T13:35:58.0267717+01:00	FAIL	[Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]	[UnhandledException]	An unhandled exception has occurred while executing the request.System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'System.Tuple`2[Presentation_Layer.ViewModels.MessageDetailVM,System.Collections.Generic.List`1[Presentation_Layer.ViewModels.AccountDetailVM]]', but this ViewDataDictionary instance requires a model item of type 'Presentation_Layer.ViewModels.MessageDetailVM'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method(Closure , ViewDataDictionary )
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.CreateViewDataDictionary(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2020-12-14T13:37:24.3993976+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-14T13:37:24.4082093+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-14T13:37:24.4104101+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-14T13:39:22.9697448+01:00	FAIL	[Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]	[UnhandledException]	An unhandled exception has occurred while executing the request.System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Message'.
+   at DatabaseLayer.Contexts.SQLMessageContext.Insert(MessageDTO dto) in B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\Contexts\SQLMessageContext.cs:line 95
+   at Forum_App.Containers.MessageContainer.Insert(Message message) in B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\Containers\MessageContainer.cs:line 42
+   at Presentation_Layer.Controllers.MessageController.SendMessage(MessageDetailVM vm) in B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\Controllers\MessageController.cs:line 85
    at lambda_method(Closure , Object , Object[] )
    at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -388,4 +427,45 @@
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:0774c386-f6c2-4d26-b3ad-129dfd793563
+Error Number:208,State:1,Class:16
 
+2020-12-14T13:40:00.7317004+01:00	FAIL	[Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]	[UnhandledException]	An unhandled exception has occurred while executing the request.System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'ID', table 'dbi407655_forum.dbo.Message'; column does not allow nulls. INSERT fails.
+   at DatabaseLayer.Contexts.SQLMessageContext.Insert(MessageDTO dto) in B:\documenten\S2 V3\Forum App S2\Forum App\Database Layer\Contexts\SQLMessageContext.cs:line 95
+   at Forum_App.Containers.MessageContainer.Insert(Message message) in B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\Containers\MessageContainer.cs:line 42
+   at Presentation_Layer.Controllers.MessageController.SendMessage(MessageDetailVM vm) in B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\Controllers\MessageController.cs:line 85
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:3f1fe208-dcf8-45ba-9665-0f0b39dc38e2
+Error Number:515,State:2,Class:16
+
+2020-12-14T13:41:21.5389607+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-14T13:41:21.5494053+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-14T13:41:21.5527849+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-14T13:52:37.5538656+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-14T13:52:37.5661735+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-14T13:52:37.5690448+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2020-12-14T13:54:44.7493959+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2020-12-14T13:54:44.7574810+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2020-12-14T13:54:44.7604669+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
