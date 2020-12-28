@@ -48,7 +48,7 @@ namespace Presentation_Layer.Controllers
             }
             return RedirectToAction("Index", "Login");
         }
-        [HttpPost]
+        [HttpGet]
         public IActionResult ReceivedMessages()
         {
             if (HttpContext.Session.GetInt32("User") != null)
