@@ -12,15 +12,22 @@ namespace DatabaseLayer.Parsers
     {
         public static AccountDTO DataSetToAccount(DataSet set, int rowIndex)
         {
-            return new AccountDTO((int)set.Tables[0].Rows[rowIndex][0])
+            if (set.Tables[0].Rows.Count > 0)
             {
-                FirstName = (string)set.Tables[0].Rows[rowIndex][1],
-                LastName = (string)set.Tables[0].Rows[rowIndex][2],
-                Email = (string)set.Tables[0].Rows[rowIndex][3],
-                Password = (string)set.Tables[0].Rows[rowIndex][4],
-                Username = (string)set.Tables[0].Rows[rowIndex][5],
-                Administrator = (bool)set.Tables[0].Rows[rowIndex][6]
-            };
+                return new AccountDTO((int)set.Tables[0].Rows[rowIndex][0])
+                {
+                    FirstName = (string)set.Tables[0].Rows[rowIndex][1],
+                    LastName = (string)set.Tables[0].Rows[rowIndex][2],
+                    Email = (string)set.Tables[0].Rows[rowIndex][3],
+                    Password = (string)set.Tables[0].Rows[rowIndex][4],
+                    Username = (string)set.Tables[0].Rows[rowIndex][5],
+                    Administrator = (bool)set.Tables[0].Rows[rowIndex][6]
+                };
+            }
+            else
+            {
+                return new AccountDTO();
+            }
         }
         public static PostDTO DataSetToPost(DataSet set, int rowIndex)
         {

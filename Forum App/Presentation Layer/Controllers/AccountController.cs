@@ -42,8 +42,6 @@ namespace Presentation_Layer.Controllers
             HttpContext.Session.SetString("Password", vm.Password);
             string username = HttpContext.Session.GetString("Username");
             string password = HttpContext.Session.GetString("Password");
-
-            ViewBag.Message = $"Your username is {username} and password is {password} ";
             return RedirectToAction("Login", "Account");
         }
         public IActionResult Index()
