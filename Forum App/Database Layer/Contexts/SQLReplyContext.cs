@@ -41,7 +41,7 @@ namespace DatabaseLayer.Contexts
             List<ReplyDTO> replies = new List<ReplyDTO>();
             try
             {
-                string sql = "SELECT ID, ReplyContent, Pinned, ReactionTime, PostID, AccountID FROM Reply";
+                string sql = "SELECT ID, ReplyContent, Pinned, ReactionTime, PostID, AccountID, Username FROM Reply";
                 DataSet results = ExecuteSql(sql, new List<KeyValuePair<string, string>>());
 
                 for (int x = 0; x < results.Tables[0].Rows.Count; x++)
@@ -61,7 +61,7 @@ namespace DatabaseLayer.Contexts
         {
             try
             {
-                string sql = "SELECT ID, ReplyContent, Pinned, ReactionTime, PostID, AccountID FROM Reply WHERE ID = @ID";
+                string sql = "SELECT ID, ReplyContent, Pinned, ReactionTime, PostID, AccountID, Username FROM Reply WHERE ID = @ID";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("ID", id.ToString()),
@@ -80,13 +80,14 @@ namespace DatabaseLayer.Contexts
         {
             try
             {
-                string sql = "INSERT INTO Reply(ReplyContent, Pinned, ReactionTime, PostID, AccountID) OUTPUT INSERTED.ID VALUES(@ReplyContent, @pinned, CURRENT_TIMESTAMP, @PostId, @AccountID)";
+                string sql = "INSERT INTO Reply(ReplyContent, Pinned, ReactionTime, PostID, AccountID, Username) OUTPUT INSERTED.ID VALUES(@ReplyContent, @pinned, CURRENT_TIMESTAMP, @PostId, @AccountID, @Username)";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("ReplyContent", dto.ReplyContent),
                     new KeyValuePair<string, string>("Pinned", dto.Pinned.ToString()),
                     new KeyValuePair<string, string>("PostID", dto.PostId.ToString()),
                     new KeyValuePair<string, string>("AccountID", dto.AccountId.ToString()),
+                    new KeyValuePair<string, string>("Username", dto.Username),
 
                 };
                 int result = ExecuteInsert(sql, parameters);

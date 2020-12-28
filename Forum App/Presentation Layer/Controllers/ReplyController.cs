@@ -40,6 +40,7 @@ namespace Presentation_Layer.Controllers
                 int postID = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("Id"));
                 reply.PostId = postID;
                 reply.AccountId = accountID;
+                reply.Username = account.Username;
                 replyContainer.Insert(reply);
                 //return RedirectToAction("Detail", new RouteValueDictionary(new { controller = "Post", action = "Detail", Id = postID }));
                 return Redirect("~/Post/Detail/?postID=" + postID);

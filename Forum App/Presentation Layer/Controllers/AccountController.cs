@@ -54,5 +54,11 @@ namespace Presentation_Layer.Controllers
             }
             return RedirectToAction("Index", "Login");
         }
+        public IActionResult Profile(int id)
+        {
+            AccountDetailVM account = new AccountDetailVM();
+            account = vmConverter.ModelToViewModel(accountContainer.GetById(id));
+            return View(account);
+        }
     }
 }

@@ -30,7 +30,7 @@
                     {
                         <tr>
                             <td>
-                                @Html.ActionLink(item.AccountId.ToString(), "Detail", "Reply", new { id = item.Id })
+                                @Html.ActionLink(item.Username, "Profile", "Account", new { id = item.Id })
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.ReplyContent)
@@ -38,10 +38,13 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.ReactionTime)
                             </td>
-                            <td>
-                                @*<a asp-area="" asp-controller="Reply" asp-action="Delete"> <button>Delete</button></a>*@
-                                @Html.ActionLink("Delete", "Delete", "Reply", new { id = item.Id}, null)
-                            </td>
+                            @if (item.account.Administrator)
+                            {                           
+                                <td>
+                                    @*<a asp-area="" asp-controller="Reply" asp-action="Delete"> <button>Delete</button></a>*@
+                                    @Html.ActionLink("Delete", "Delete", "Reply", new { id = item.Id}, null)
+                                </td>
+                            }
                         </tr>
                     }
                 }

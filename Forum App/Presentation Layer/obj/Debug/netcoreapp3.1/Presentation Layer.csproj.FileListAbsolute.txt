@@ -130,3 +130,4 @@ C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Message\ReceivedMessages.cshtml.g.cs
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Message\SendMessage.cshtml.g.cs
 C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Message\SentMessages.cshtml.g.cs
+C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer\obj\Debug\netcoreapp3.1\Razor\Views\Account\Profile.cshtml.g.cs

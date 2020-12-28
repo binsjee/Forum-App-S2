@@ -13,6 +13,7 @@ namespace Database_Layer.DTO_s
         public DateTime ReactionTime { get; set; }
         public int PostId { get; set; }
         public int AccountId { get; set; }
+        public string Username { get; set; }
         public ReplyDTO(int id)
         {
             Id = id;

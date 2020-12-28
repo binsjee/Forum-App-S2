@@ -13,5 +13,7 @@ namespace Presentation_Layer.ViewModels
         public DateTime ReactionTime { get; set; }
         public int PostId { get; set; }
         public int AccountId { get; set; }
+        public AccountDetailVM account { get; set; } = new AccountDetailVM();
+        public string Username { get; set; }
     }
 }
