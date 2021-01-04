@@ -14,6 +14,7 @@ namespace Forum_App.Models.Data
         public DateTime ReactionTime { get; set; }
         public int PostId { get; set; }
         public int AccountId { get; set; }
+        public string Username { get; set; }
         
 
     }

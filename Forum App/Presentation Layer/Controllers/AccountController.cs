@@ -42,8 +42,6 @@ namespace Presentation_Layer.Controllers
             HttpContext.Session.SetString("Password", vm.Password);
             string username = HttpContext.Session.GetString("Username");
             string password = HttpContext.Session.GetString("Password");
-
-            ViewBag.Message = $"Your username is {username} and password is {password} ";
             return RedirectToAction("Login", "Account");
         }
         public IActionResult Index()
@@ -55,6 +53,12 @@ namespace Presentation_Layer.Controllers
                 return View(user);
             }
             return RedirectToAction("Index", "Login");
+        }
+        public IActionResult Profile(int id)
+        {
+            AccountDetailVM account = new AccountDetailVM();
+            account = vmConverter.ModelToViewModel(accountContainer.GetById(id));
+            return View(account);
         }
     }
 }

@@ -8,5 +8,6 @@ namespace Presentation_Layer.ViewModels
     public class PostViewModel
     {
         public List<PostDetailVM> PostViewModels { get; set; } = new List<PostDetailVM>();
+        public AccountDetailVM account { get; set; } = new AccountDetailVM();
     }
 }

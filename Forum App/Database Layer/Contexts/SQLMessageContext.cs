@@ -27,7 +27,7 @@ namespace DatabaseLayer.Contexts
             List<MessageDTO> messages = new List<MessageDTO>();
             try
             {
-                string sql = "SELECT Title, MessageContent, MessageTime, SenderId FROM Message WHERE ReceiverId = @ReceiverId ";
+                string sql = "SELECT * FROM Message WHERE ReceiverId = @ReceiverId ";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("ReceiverId", id.ToString()),
@@ -51,7 +51,7 @@ namespace DatabaseLayer.Contexts
             List<MessageDTO> messages = new List<MessageDTO>();
             try
             {
-                string sql = "SELECT Title, MessageContent, MessageTime, ReceiverId FROM Message WHERE SenderId = @SenderId ";
+                string sql = "SELECT * FROM Message WHERE SenderId = @SenderId ";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("SenderId", id.ToString()),

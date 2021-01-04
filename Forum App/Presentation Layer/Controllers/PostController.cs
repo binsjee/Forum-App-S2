@@ -27,12 +27,19 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult Index()
         {
-            PostViewModel vm = new PostViewModel();
-            List<Post> posts = new List<Post>();
-            posts = Container.GetAll();
-            //List<PostDetailVM> vms = new List<PostDetailVM>();
-            vm.PostViewModels = vmconverter.ModelsToViewModels(posts);
-            return View(vm);
+            if(HttpContext.Session.GetInt32("User") != null)
+            {
+                AccountDetailVM account = new AccountDetailVM();
+                account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
+                PostViewModel vm = new PostViewModel();
+                List<Post> posts = new List<Post>();
+                posts = Container.GetAll();
+                //List<PostDetailVM> vms = new List<PostDetailVM>();
+                vm.PostViewModels = vmconverter.ModelsToViewModels(posts);
+                vm.account = account;
+                return View(vm);
+            }
+            return RedirectToAction("Index", "Login");
 
         }
         public IActionResult Create()
@@ -51,12 +58,19 @@ namespace Presentation_Layer.Controllers
         }
         public IActionResult Detail(int postID)
         {
-            PostDetailVM vm = new PostDetailVM();
-            Post post = Container.GetById(postID);
-            post.Replies = replyContainer.GetAll();
-            HttpContext.Session.SetString("Id", JsonConvert.SerializeObject(post.Id));
-            vm = vmconverter.ModelToViewModel(post);
-            return View(vm);
+            if (HttpContext.Session.GetInt32("User") != null)
+            {
+                AccountDetailVM account = new AccountDetailVM();
+                account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
+                PostDetailVM vm = new PostDetailVM();
+                Post post = Container.GetById(postID);
+                post.Replies = replyContainer.GetAll();
+                HttpContext.Session.SetString("Id", JsonConvert.SerializeObject(post.Id));
+                vm = vmconverter.ModelToViewModel(post);
+                vm.account = account;
+                return View(vm);
+            }
+            return RedirectToAction("Index", "Login");
         }
 
         public IActionResult Delete(int id)

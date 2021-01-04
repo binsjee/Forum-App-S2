@@ -59,8 +59,11 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,85,89,0.9668242296918768) 2%, rgba(22,178,210,1) 27%, rgba(0,212,255,1) 47%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .footer {
   position: absolute;
@@ -199,13 +202,43 @@ ul{
 
 .bottom {
     flex-grow: 1;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .bottomLeft {
     position: relative;
     bottom: 0px;
     overflow: hidden;
+}
+
+#forum {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+#forumicon{
+    color: #c3cacf;
+    text-decoration:none;
+    vertical-align: middle;
+}
+
+#add {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+#addicon{
+    color: #c3cacf;
+    text-decoration:none;
+    vertical-align: middle;
 }
 #profile {
     padding-top: 13px;

@@ -12,15 +12,22 @@ namespace DatabaseLayer.Parsers
     {
         public static AccountDTO DataSetToAccount(DataSet set, int rowIndex)
         {
-            return new AccountDTO((int)set.Tables[0].Rows[rowIndex][0])
+            if (set.Tables[0].Rows.Count > 0)
             {
-                FirstName = (string)set.Tables[0].Rows[rowIndex][1],
-                LastName = (string)set.Tables[0].Rows[rowIndex][2],
-                Email = (string)set.Tables[0].Rows[rowIndex][3],
-                Password = (string)set.Tables[0].Rows[rowIndex][4],
-                Username = (string)set.Tables[0].Rows[rowIndex][5],
-                Administrator = (bool)set.Tables[0].Rows[rowIndex][6]
-            };
+                return new AccountDTO((int)set.Tables[0].Rows[rowIndex][0])
+                {
+                    FirstName = (string)set.Tables[0].Rows[rowIndex][1],
+                    LastName = (string)set.Tables[0].Rows[rowIndex][2],
+                    Email = (string)set.Tables[0].Rows[rowIndex][3],
+                    Password = (string)set.Tables[0].Rows[rowIndex][4],
+                    Username = (string)set.Tables[0].Rows[rowIndex][5],
+                    Administrator = (bool)set.Tables[0].Rows[rowIndex][6]
+                };
+            }
+            else
+            {
+                return new AccountDTO();
+            }
         }
         public static PostDTO DataSetToPost(DataSet set, int rowIndex)
         {
@@ -51,6 +58,7 @@ namespace DatabaseLayer.Parsers
                     ReactionTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
                     PostId = (int)set.Tables[0].Rows[rowIndex][4],
                     AccountId = (int)set.Tables[0].Rows[rowIndex][5],
+                    Username = (string)set.Tables[0].Rows[rowIndex][6],
                 };
             }
             else
@@ -69,6 +77,42 @@ namespace DatabaseLayer.Parsers
                     MessageTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
                     SenderId = (int)set.Tables[0].Rows[rowIndex][4],
                     ReceiverId = (int)set.Tables[0].Rows[rowIndex][5],
+                };
+            }
+            else
+            {
+                return new MessageDTO();
+            }
+        }
+        public static MessageDTO DataSetToSentMessages(DataSet set, int rowIndex)
+        {
+            if (set.Tables[0].Rows.Count > 0)
+            {
+                return new MessageDTO((int)set.Tables[0].Rows[rowIndex][0])
+                {
+                    Title = (string)set.Tables[0].Rows[rowIndex][1],
+                    MessageContent = (string)set.Tables[0].Rows[rowIndex][2],
+                    MessageTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
+                    //SenderId = (int)set.Tables[0].Rows[rowIndex][4],
+                    ReceiverId = (int)set.Tables[0].Rows[rowIndex][5],
+                };
+            }
+            else
+            {
+                return new MessageDTO();
+            }
+        }
+        public static MessageDTO DataSetToReceivedMessages(DataSet set, int rowIndex)
+        {
+            if (set.Tables[0].Rows.Count > 0)
+            {
+                return new MessageDTO((int)set.Tables[0].Rows[rowIndex][0])
+                {
+                    Title = (string)set.Tables[0].Rows[rowIndex][1],
+                    MessageContent = (string)set.Tables[0].Rows[rowIndex][2],
+                    MessageTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
+                    SenderId = (int)set.Tables[0].Rows[rowIndex][4],
+                    //ReceiverId = (int)set.Tables[0].Rows[rowIndex][5],
                 };
             }
             else

@@ -33,7 +33,7 @@ namespace Presentation_Layer.Controllers
             }
             return View();
         }
-        [HttpPost]
+
         public IActionResult SentMessages()
         {
             if (HttpContext.Session.GetInt32("User") != null)
@@ -41,6 +41,7 @@ namespace Presentation_Layer.Controllers
                 AccountDetailVM account = new AccountDetailVM();
                 account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 MessageViewModel vm = new MessageViewModel();
+                vm.Account = account;
                 List<Message> messages = new List<Message>();
                 messages = messageContainer.GetAllBySender(account.Id);
                 vm.Messages = messageVMConverter.ModelsToViewModels(messages);
@@ -48,7 +49,7 @@ namespace Presentation_Layer.Controllers
             }
             return RedirectToAction("Index", "Login");
         }
-        [HttpGet]
+
         public IActionResult ReceivedMessages()
         {
             if (HttpContext.Session.GetInt32("User") != null)
@@ -56,6 +57,7 @@ namespace Presentation_Layer.Controllers
                 AccountDetailVM account = new AccountDetailVM();
                 account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 MessageViewModel vm = new MessageViewModel();
+                vm.Account = account;
                 List<Message> messages = new List<Message>();
                 messages = messageContainer.GetAllByReceiver(account.Id);
                 vm.Messages = messageVMConverter.ModelsToViewModels(messages);

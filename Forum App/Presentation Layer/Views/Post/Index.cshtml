@@ -30,9 +30,12 @@
                     <td>
                     @Html.DisplayFor(modelItem => item.PostTime)
                     </td>
-                    <td>
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id})
-                    </td>
+                    @if (Model.account.Administrator)
+                    {
+                        <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id})
+                        </td>
+                    }
                     </tr>
                 }
         </table>

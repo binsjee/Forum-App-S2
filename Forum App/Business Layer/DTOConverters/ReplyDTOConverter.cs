@@ -23,6 +23,7 @@ namespace Business_Layer.DTOConverters
                 reply.ReactionTime = dto.ReactionTime;
                 reply.PostId = dto.PostId;
                 reply.AccountId = dto.AccountId;
+                reply.Username = dto.Username;
                 replies.Add(reply);
             }
             return replies;
@@ -38,6 +39,7 @@ namespace Business_Layer.DTOConverters
                 ReactionTime = dto.ReactionTime,
                 PostId = dto.PostId,
                 AccountId = dto.PostId,
+                Username = dto.Username,
             };
             return reply;
         }
@@ -54,6 +56,7 @@ namespace Business_Layer.DTOConverters
                 dto.ReactionTime = reply.ReactionTime;
                 dto.PostId = reply.PostId;
                 dto.AccountId = reply.AccountId;
+                dto.Username = reply.Username;
                 DTOs.Add(dto);
             }
             return DTOs;
@@ -69,6 +72,7 @@ namespace Business_Layer.DTOConverters
                 ReactionTime = model.ReactionTime,
                 PostId = model.PostId,
                 AccountId = model.PostId,
+                Username = model.Username,
             };
             return dto;
         }

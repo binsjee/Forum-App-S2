@@ -23,6 +23,7 @@ namespace Presentation_Layer.ViewModelConverters
                 vm.ReactionTime = reply.ReactionTime;
                 vm.PostId = reply.PostId;
                 vm.AccountId = reply.AccountId;
+                vm.Username = reply.Username;
                 vms.Add(vm);
             }
             return vms;
@@ -38,6 +39,7 @@ namespace Presentation_Layer.ViewModelConverters
                 ReactionTime = model.ReactionTime,
                 PostId = model.PostId,
                 AccountId = model.AccountId,
+                Username = model.Username,
             };
             return vm;
         }
@@ -54,6 +56,7 @@ namespace Presentation_Layer.ViewModelConverters
                 reply.ReactionTime = vm.ReactionTime;
                 reply.PostId = vm.PostId;
                 reply.AccountId = vm.AccountId;
+                reply.Username = vm.Username;
                 replies.Add(reply);
             }
             return replies;
@@ -69,6 +72,7 @@ namespace Presentation_Layer.ViewModelConverters
                 ReactionTime = viewmodel.ReactionTime,
                 PostId = viewmodel.PostId,
                 AccountId = viewmodel.AccountId,
+                Username = viewmodel.Username,
             };
             return reply;
         }
