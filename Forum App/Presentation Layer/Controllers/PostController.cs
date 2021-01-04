@@ -60,14 +60,14 @@ namespace Presentation_Layer.Controllers
         {
             if (HttpContext.Session.GetInt32("User") != null)
             {
-                //AccountDetailVM account = new AccountDetailVM();
-                //account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
+                AccountDetailVM account = new AccountDetailVM();
+                account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 PostDetailVM vm = new PostDetailVM();
                 Post post = Container.GetById(postID);
                 post.Replies = replyContainer.GetAll();
                 HttpContext.Session.SetString("Id", JsonConvert.SerializeObject(post.Id));
                 vm = vmconverter.ModelToViewModel(post);
-                //vm.account = account;
+                vm.account = account;
                 return View(vm);
             }
             return RedirectToAction("Index", "Login");

@@ -38,7 +38,7 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.ReactionTime)
                             </td>
-                            @if (item.account.Administrator)
+                            @if (Model.account.Administrator)
                             {                           
                                 <td>
                                     @*<a asp-area="" asp-controller="Reply" asp-action="Delete"> <button>Delete</button></a>*@

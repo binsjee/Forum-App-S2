@@ -7,11 +7,10 @@ body {
     margin: 0px;
     display: flex;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgba(81,85,89,0.9668242296918768) 46%, rgba(0,212,255,1) 89%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,85,89,0.9668242296918768) 2%, rgba(22,178,210,1) 27%, rgba(0,212,255,1) 47%);
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
-
 }
 
 #LoginBox {
@@ -45,4 +44,38 @@ body {
 }
 .BigText {
     font-size: 74px;
+}
+
+/*Register dingen*/
+.RegisterTable {
+    text-align: left;
+    margin: auto;
+    border-spacing: 0 10px;
+    border-collapse: separate;
+    border: hidden;
+}
+
+.RegisterInputBox {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.RegisterTd {
+    padding-right: 15px;
+    width: 50%;
+    border: hidden;
+}
+
+.RegisterTr {
+    width: 100%;
+    border: hidden;
+}
+.BackgroundBox {
+    background-color: White;
+    opacity: 0.9;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
