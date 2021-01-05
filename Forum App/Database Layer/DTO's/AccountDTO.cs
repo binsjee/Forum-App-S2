@@ -22,5 +22,16 @@ namespace Database_Layer.DTO_s
         {
 
         }
+
+        public AccountDTO(int id, string firstName, string lastName, string email, string password, string username, bool administrator)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Password = password;
+            Username = username;
+            Administrator = administrator;
+        }
     }
 }

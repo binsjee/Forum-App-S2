@@ -1052,3 +1052,6 @@ Error Number:515,State:2,Class:16
    at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
    at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
 
+2021-01-05T09:28:11.2809637+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2021-01-05T09:28:11.2942915+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2021-01-05T09:28:11.2956593+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer

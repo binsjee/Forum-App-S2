@@ -7,7 +7,7 @@ using Forum_App.Models.Data;
 
 namespace Business_Layer.DTOConverters
 {
-    class AccountDTOConverter : IDTOConverter<AccountDTO, Account>
+    public class AccountDTOConverter : IDTOConverter<AccountDTO, Account>
     {
         public List<Account> DTOsToModels(List<AccountDTO> DTOs)
         {

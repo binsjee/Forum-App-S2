@@ -9,7 +9,7 @@ using Database_Layer.Interfaces;
 
 namespace Business_Layer.DTOConverters
 {
-    class ReplyDTOConverter : IDTOConverter<ReplyDTO, Reply>
+    public class ReplyDTOConverter : IDTOConverter<ReplyDTO, Reply>
     {
         public List<Reply> DTOsToModels(List<ReplyDTO> DTOs)
         {

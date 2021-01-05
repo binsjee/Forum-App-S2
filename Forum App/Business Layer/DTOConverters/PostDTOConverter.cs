@@ -8,7 +8,7 @@ using Database_Layer.Interfaces;
 
 namespace Business_Layer.DTOConverters
 {
-    class PostDTOConverter : IDTOConverter<PostDTO, Post>
+    public class PostDTOConverter : IDTOConverter<PostDTO, Post>
     {
         public List<Post> DTOsToModels(List<PostDTO> DTOs)
         {

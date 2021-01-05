@@ -8,7 +8,7 @@ using Database_Layer.Interfaces;
 
 namespace Business_Layer.DTOConverters
 {
-    class MessageDTOConverter : IDTOConverter<MessageDTO, Message>
+    public class MessageDTOConverter : IDTOConverter<MessageDTO, Message>
     {
         public List<Message> DTOsToModels(List<MessageDTO> DTOs)
         {
