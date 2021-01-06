@@ -8,5 +8,6 @@ namespace DatabaseLayer.Interfaces
 {
     public interface IForumContext : IGenericQueries<ForumDTO>
     {
+        long Insert(ForumDTO dto);
     }
 }

@@ -235,9 +235,37 @@ ul{
     text-decoration: none;
 }
 
-#addicon{
+#forumaddicon{
     color: #c3cacf;
     text-decoration:none;
+    vertical-align: middle;
+}
+#create {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+#addicon {
+    color: #c3cacf;
+    text-decoration: none;
+    vertical-align: middle;
+}
+#logout {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+#logouticon {
+    color: #c3cacf;
+    text-decoration: none;
     vertical-align: middle;
 }
 #profile {

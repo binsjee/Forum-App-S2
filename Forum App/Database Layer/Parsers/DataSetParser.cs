@@ -120,5 +120,23 @@ namespace DatabaseLayer.Parsers
                 return new MessageDTO();
             }
         }
+        public static ForumDTO DataSetToForum(DataSet set, int rowIndex)
+        {
+            if(set.Tables[0].Rows.Count > 0)
+            {
+                return new ForumDTO((int)set.Tables[0].Rows[rowIndex][0])
+                {
+                    Title = (string)set.Tables[0].Rows[rowIndex][1],
+                    Description = (string)set.Tables[0].Rows[rowIndex][2],
+                    //Image = (byte[])set.Tables[0].Rows[rowIndex][3],
+                    CreationDate = (DateTime)set.Tables[0].Rows[rowIndex][4],
+                    CreatorID = (int)set.Tables[0].Rows[rowIndex][5],
+                };
+            }
+            else
+            {
+                return new ForumDTO();
+            }
+        }
     }
 }

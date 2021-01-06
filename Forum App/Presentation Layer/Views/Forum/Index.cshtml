@@ -1,0 +1,41 @@
+﻿@using Presentation_Layer.ViewModels
+@model Presentation_Layer.ViewModels.ForumVM
+
+@{ 
+    ViewData["Title"] = "Forums";
+}
+
+<body>
+    <div id="">
+        <table class="table table-striped table-hover">
+            <h1>All Forums</h1>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Creator</th>
+                    <th>Creation Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(ForumDetailVM item in Model.Forums)
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink(item.Title, "Detail", new { ForumID = item.Id})
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Creator.Username)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreationDate)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table> 
+    </div>
+</body>

@@ -1,0 +1,45 @@
+﻿@model Presentation_Layer.ViewModels.ForumDetailVM
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/Login.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="top-right">
+        <div id="BigTextName">
+            <div>
+                <span>Forum aanmaken</span>
+            </div>
+        </div>
+    </div>
+    <div id="LoginBoxPost" class="bottom">
+        <div class="BackgroundBox">
+            <div id="LoginForm" style="background-color:white">
+                <form asp-action="Create" method="post">
+                    <table class="PostTable">
+                        <tr class="PostTr">
+                            <td class="PostTd">
+                                <input asp-for="Title" placeholder="Titel..." class="PostInputBox" />
+                                <span asp-validation-for="Title"></span>
+                            </td>
+                        </tr>
+                        <tr class="PostTr">
+                            <td class="PostTd">
+                                <input asp-for="Description" placeholder="Omschrijving..." class="PostInputBox" />
+                                <span asp-validation-for="Description"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="form-group">
+                        <input type="submit" class="LoginButton" value="Create Forum!" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

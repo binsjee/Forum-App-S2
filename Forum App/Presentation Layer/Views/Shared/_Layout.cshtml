@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@using Presentation_Layer.ViewModels;
+@using Newtonsoft.Json;
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -14,7 +19,8 @@
     <div id="left" class="column">
         <div class="top-left">
             <div id="home">
-                <a asp-area="" asp-controller="Home" asp-action="Index" id="homeIcon" class="material-icons">home</a></div>
+                <a asp-area="" asp-controller="Forum" asp-action="Index" id="homeIcon" class="material-icons">home</a>
+            </div>
         </div>
         <div class="top-left">
             <div id="forum">
@@ -26,8 +32,25 @@
                 <a asp-area="" asp-controller="Post" asp-action="Create" id="addicon" class="material-icons">add_box</a>
             </div>
         </div>
+        @if (HttpContextAccessor.HttpContext.Session.GetString("User") != null)
+        {
+            AccountDetailVM account = new AccountDetailVM();
+            account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContextAccessor.HttpContext.Session.GetString("User"));
+            if (account.Administrator)
+            {
+                <div class="top-left">
+                    <div id="create">
+                        <a asp-area="" asp-controller="Forum" asp-action="Create" id="forumaddicon" class="material-icons">note_add</a>
+                    </div>
+                </div>
+            }
+        }
+
         <div class="bottom">
 
+        </div>
+        <div class="bottomLeft">
+            <div id="logout"><a asp-area="" asp-controller="Account" asp-action="Logout" id="logouticon" class="material-icons">exit_to_app</a></div>
         </div>
         <div class="bottomLeft">
             <div id="profile"><a asp-area="" asp-controller="Account" asp-action="Index" id="profileIcon" class="material-icons">person</a></div>

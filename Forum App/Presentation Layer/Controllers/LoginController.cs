@@ -42,7 +42,7 @@ namespace Presentation_Layer.Controllers
                 if(vm.Id != 0)
                 {
                     HttpContext.Session.SetString("User", JsonConvert.SerializeObject(vm));
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Forum");
                 }
             }
             return View(vm);

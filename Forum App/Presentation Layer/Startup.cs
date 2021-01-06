@@ -46,6 +46,7 @@ namespace Presentation_Layer
             services.AddScoped<ForumContainer>();
             services.AddScoped<ReplyContainer>();
 
+            services.AddHttpContextAccessor();
             services.AddSession();
             services.AddLogging(LoggingBuilder =>
             {

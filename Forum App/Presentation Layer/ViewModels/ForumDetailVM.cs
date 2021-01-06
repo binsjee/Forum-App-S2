@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Forum_App.Models.Data
+namespace Presentation_Layer.ViewModels
 {
-    public class Forum
+    public class ForumDetailVM
     {
-        public Forum(int id)
-        {
-            Id = id;
-        }
-
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public byte Image { get; set; }
+        public byte[] Image { get; set; }
         public DateTime CreationDate { get; set; }
         public int CreatorID { get; set; }
-
-        public List<Post> Posts { get; set; }
-
+        public AccountDetailVM Creator { get; set; } = new AccountDetailVM();
+        public List<PostDetailVM> Posts { get; set; } = new List<PostDetailVM>();
     }
 }

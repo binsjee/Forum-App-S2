@@ -36,14 +36,6 @@ namespace Presentation_Layer.Controllers
         {
             return View();
         }
-        public IActionResult LoginAccount(AccountDetailVM vm)
-        {
-            HttpContext.Session.SetString("Username", vm.Username);
-            HttpContext.Session.SetString("Password", vm.Password);
-            string username = HttpContext.Session.GetString("Username");
-            string password = HttpContext.Session.GetString("Password");
-            return RedirectToAction("Login", "Account");
-        }
         public IActionResult Index()
         {
             if(HttpContext.Session.GetInt32("User") != null)
@@ -59,6 +51,11 @@ namespace Presentation_Layer.Controllers
             AccountDetailVM account = new AccountDetailVM();
             account = vmConverter.ModelToViewModel(accountContainer.GetById(id));
             return View(account);
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Login");
         }
     }
 }

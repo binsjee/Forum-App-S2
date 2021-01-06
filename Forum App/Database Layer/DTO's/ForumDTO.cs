@@ -7,12 +7,20 @@ namespace Database_Layer.DTO_s
 {
     public class ForumDTO
     {
+        public ForumDTO(int id)
+        {
+            Id = id;
+        }
+        public ForumDTO()
+        {
+
+        }
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public byte Image { get; set; }
         public DateTime CreationDate { get; set; }
-
-        public IEnumerable<PostDTO> Posts { get; set; }
+        public int CreatorID { get; set; }
+        public List<PostDTO> Posts { get; set; }
     }
 }
