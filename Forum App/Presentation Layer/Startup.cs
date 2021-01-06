@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Database_Layer.Interfaces;
 using DatabaseLayer.Contexts;
 using DatabaseLayer.Interfaces;
 using Forum_App.Containers;
@@ -36,6 +37,7 @@ namespace Presentation_Layer
             services.AddScoped<IForumContext, SQLForumContext>();
             services.AddScoped<IMessageContext, SQLMessageContext>();
             services.AddScoped<IReplyContext, SQLReplyContext>();
+            services.AddScoped<IPostUpdateContext, SQLPostContext>();
 
             //add containers
             services.AddScoped<AccountContainer>();

@@ -9,6 +9,6 @@ namespace DatabaseLayer.Interfaces
     public interface IReplyContext : IGenericQueries<ReplyDTO>
     {
         public long Insert(ReplyDTO dto);
-        void Delete(ReplyDTO dto);
+        bool Delete(ReplyDTO dto);
     }
 }

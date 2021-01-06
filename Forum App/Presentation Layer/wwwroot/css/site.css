@@ -180,7 +180,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    border-left: #e31b6d 2px solid;
+/*    border-left: #e31b6d 2px solid;*/
 }
 ul{
     display: inline-flex;

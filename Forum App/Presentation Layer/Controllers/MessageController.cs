@@ -80,8 +80,8 @@ namespace Presentation_Layer.Controllers
         {
             if(HttpContext.Session.GetInt32("User") != null)
             {
-                Account account = new Account();
-                account = JsonConvert.DeserializeObject<Account>(HttpContext.Session.GetString("User"));
+                AccountDetailVM account = new AccountDetailVM();
+                account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 Message message = messageVMConverter.ViewModelToModel(vm);
                 message.SenderId = account.Id;
                 messageContainer.Insert(message);

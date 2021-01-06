@@ -37,9 +37,8 @@ namespace Presentation_Layer.ViewModelConverters
 
         public Account ViewModelToModel(AccountDetailVM viewmodel)
         {
-            Account account = new Account()
+            Account account = new Account(viewmodel.Id)
             {
-                Id = viewmodel.Id,
                 FirstName = viewmodel.FirstName,
                 LastName = viewmodel.LastName,
                 Email = viewmodel.Email,

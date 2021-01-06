@@ -10,6 +10,12 @@
     <div class="post-desc">
     @Html.DisplayFor(model => model.PostContent)
     </div>
+    @if(Model.account.Id == Model.AccountId)
+    {
+        <div>
+            <a asp-area="" asp-controller="Post" asp-action="Edit" asp-route-postID="@Model.Id" class="btn btn-danger">Edit Post</a>
+        </div>
+    }
 </div>
 <a asp-area="" asp-controller="Reply" asp-action="ShowReplies"></a>
 <div id="table-wrapper">

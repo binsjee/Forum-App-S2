@@ -73,6 +73,26 @@ namespace Forum_App.Contexts
             }
             return retVal;
         }
+        public void ExecuteUpdate(string sql, List<KeyValuePair<string, string>> parameters)
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection(_ConnectionString);
+                SqlCommand command = new SqlCommand();
+                command = connection.CreateCommand();
+
+                command.Parameters.AddRange(GetParameters(parameters));
+                command.CommandText = sql;
+
+                connection.Open();
+                command.ExecuteScalar();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
     }
 }

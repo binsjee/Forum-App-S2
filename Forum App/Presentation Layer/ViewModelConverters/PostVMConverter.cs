@@ -21,6 +21,7 @@ namespace Presentation_Layer.Converters
                 vm.Title = post.Title;
                 vm.PostContent = post.PostContent;
                 vm.PostTime = post.PostTime;
+                vm.AccountId = post.AccountId;
                 vms.Add(vm);
             }
             return vms;
@@ -28,20 +29,37 @@ namespace Presentation_Layer.Converters
 
         public PostDetailVM ModelToViewModel(Post model)
         {
-            List<ReplyDetailVM> replies = new List<ReplyDetailVM>();
-            foreach(Reply reply in model.Replies)
+            if(model.Replies != null)
             {
-                replies.Add(converter.ModelToViewModel(reply));
+                List<ReplyDetailVM> replies = new List<ReplyDetailVM>();
+                foreach (Reply reply in model.Replies)
+                {
+                    replies.Add(converter.ModelToViewModel(reply));
+                }
+                PostDetailVM vm = new PostDetailVM()
+                {
+                    Id = model.Id,
+                    Title = model.Title,
+                    PostContent = model.PostContent,
+                    PostTime = model.PostTime,
+                    Replies = replies,
+                    AccountId = model.AccountId,
+                };
+                return vm;
             }
-            PostDetailVM vm = new PostDetailVM()
+            else
             {
-                Id = model.Id,
-                Title = model.Title,
-                PostContent = model.PostContent,
-                PostTime = model.PostTime,
-                Replies = replies,
-            };
-            return vm;
+                PostDetailVM vm = new PostDetailVM()
+                {
+                    Id = model.Id,
+                    Title = model.Title,
+                    PostContent = model.PostContent,
+                    PostTime = model.PostTime,
+                    AccountId = model.AccountId,
+                };
+                return vm;
+            }
+
         }
 
         public List<Post> ViewModelsToModels(List<PostDetailVM> viewmodels)
@@ -49,9 +67,10 @@ namespace Presentation_Layer.Converters
             List<Post> posts = new List<Post>();
             foreach(PostDetailVM vm in viewmodels)
             {
-                Post post = new Post();
+                Post post = new Post(vm.Id);
                 post.Title = vm.Title;
                 post.PostContent = vm.PostContent;
+                post.AccountId = vm.AccountId;
                 posts.Add(post);
             }
             return posts;
@@ -59,10 +78,12 @@ namespace Presentation_Layer.Converters
 
         public Post ViewModelToModel(PostDetailVM viewmodel)
         {
-            Post post = new Post()
+            Post post = new Post(viewmodel.Id)
             {
                 Title = viewmodel.Title,
-                PostContent = viewmodel.PostContent
+                PostContent = viewmodel.PostContent,
+                AccountId = viewmodel.AccountId,
+                
             };
             return post;
         }

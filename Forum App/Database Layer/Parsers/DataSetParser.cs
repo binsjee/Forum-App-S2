@@ -39,7 +39,7 @@ namespace DatabaseLayer.Parsers
                     Title = (string)set.Tables[0].Rows[rowIndex][1],
                     PostContent = (string)set.Tables[0].Rows[rowIndex][2],
                     PostTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
-                    //AccountId = (int)set.Tables[0].Rows[rowIndex][5]
+                    AccountId = (int)set.Tables[0].Rows[rowIndex][4]
                 };
             }
             else

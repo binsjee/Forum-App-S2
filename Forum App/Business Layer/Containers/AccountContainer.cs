@@ -41,7 +41,7 @@ namespace Forum_App.Containers
         }
         public Account GetById(int id)
         {
-            Account account = new Account();
+            Account account = new Account(id);
             AccountDTO dto = new AccountDTO();
             dto = context.GetById(id);
             account = converter.DtoToModel(dto);

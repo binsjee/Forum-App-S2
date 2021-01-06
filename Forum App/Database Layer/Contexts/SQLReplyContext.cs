@@ -19,7 +19,7 @@ namespace DatabaseLayer.Contexts
 
         }
 
-        public void Delete(ReplyDTO dto)
+        public bool Delete(ReplyDTO dto)
         {
             try
             {
@@ -29,6 +29,7 @@ namespace DatabaseLayer.Contexts
                     new KeyValuePair<string, string>("ID", dto.Id.ToString())
                 };
                 ExecuteSql(sql, parameters);
+                return true;
             }
             catch(Exception e)
             {

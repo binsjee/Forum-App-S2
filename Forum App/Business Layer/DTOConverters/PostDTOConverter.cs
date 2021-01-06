@@ -15,11 +15,11 @@ namespace Business_Layer.DTOConverters
             List<Post> posts = new List<Post>();
             foreach (PostDTO dto in DTOs)
             {
-                Post post = new Post();
-                post.Id = dto.Id;
+                Post post = new Post(dto.Id);
                 post.Title = dto.Title;
                 post.PostContent = dto.PostContent;
                 post.PostTime = dto.PostTime;
+                post.AccountId = dto.AccountId;
                 posts.Add(post);
             }
             return posts;
@@ -27,12 +27,12 @@ namespace Business_Layer.DTOConverters
 
         public Post DtoToModel(PostDTO dto)
         {
-            Post post = new Post()
+            Post post = new Post(dto.Id)
             {
-                Id = dto.Id,
                 Title = dto.Title,
                 PostContent = dto.PostContent,
                 PostTime = dto.PostTime,
+                AccountId = dto.AccountId,
             };
             return post;
         }
@@ -45,6 +45,7 @@ namespace Business_Layer.DTOConverters
                 PostDTO dto = new PostDTO();
                 dto.Title = post.Title;
                 dto.PostContent = post.PostContent;
+                dto.AccountId = post.AccountId;
                 DTOs.Add(dto);
             }
             return DTOs;
@@ -58,6 +59,7 @@ namespace Business_Layer.DTOConverters
                 Title = model.Title,
                 PostContent = model.PostContent,
                 PostTime = model.PostTime,
+                AccountId = model.AccountId,
             };
             return dto;
         }

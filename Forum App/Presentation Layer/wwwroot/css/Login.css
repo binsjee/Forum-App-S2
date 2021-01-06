@@ -71,6 +71,36 @@ body {
     width: 100%;
     border: hidden;
 }
+.PostTable {
+    text-align: left;
+    margin: auto;
+    border-spacing: 0 10px;
+    border-collapse: separate;
+    border: hidden;
+}
+
+.PostInputBox {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.PostTd {
+    padding-right: 15px;
+    width: 50%;
+    border: hidden;
+}
+
+.PostTr {
+    width: 100%;
+    border: hidden;
+}
+
+.PostBox {
+    color: white;
+    background-color: rgba(55, 106, 110, 0.6);
+    width: 100%;
+}
 .BackgroundBox {
     background-color: White;
     opacity: 0.9;
@@ -78,4 +108,21 @@ body {
     padding: 10px;
     margin-left: 200px;
     margin-right: 200px;
+}
+#LoginBoxPost {
+    color: white;
+    margin-top: 6%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+#BigTextPost {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+#BigTextName {
+    font-size: 45px;
 }

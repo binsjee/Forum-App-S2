@@ -22,5 +22,15 @@ namespace Database_Layer.DTO_s
         {
             this.Id = id;
         }
+
+        public MessageDTO(int id, string title, string messageContent, DateTime messageTime, int senderId, int receiverId)
+        {
+            Id = id;
+            Title = title;
+            MessageContent = messageContent;
+            MessageTime = messageTime;
+            SenderId = senderId;
+            ReceiverId = receiverId;
+        }
     }
 }

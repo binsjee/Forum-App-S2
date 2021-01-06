@@ -34,8 +34,8 @@ namespace Presentation_Layer.Controllers
             if (HttpContext.Session.GetInt32("User") != null)
             {
                 Reply reply = vmconverter.ViewModelToModel(vm);
-                Account account = new Account();
-                account = JsonConvert.DeserializeObject<Account>(HttpContext.Session.GetString("User"));
+                AccountDetailVM account = new AccountDetailVM();
+                account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 int accountID = account.Id;
                 int postID = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("Id"));
                 reply.PostId = postID;
@@ -69,8 +69,8 @@ namespace Presentation_Layer.Controllers
         {
             if (HttpContext.Session.GetInt32("User") != null)
             {
-                Account account = new Account();
-                account = JsonConvert.DeserializeObject<Account>(HttpContext.Session.GetString("User"));
+                AccountDetailVM account = new AccountDetailVM();
+                account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 if (account.Administrator)
                 {
                     Reply r = new Reply();

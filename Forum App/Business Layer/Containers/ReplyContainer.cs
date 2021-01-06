@@ -31,11 +31,12 @@ namespace Forum_App.Containers
             replies = converter.DTOsToModels(DTOs);
             return replies;
         }
-        public void Delete(Reply reply)
+        public bool Delete(Reply reply)
         {
             ReplyDTO dto = new ReplyDTO();
             dto = converter.ModelToDTO(reply);
             context.Delete(dto);
+            return true;
         }
         public Reply GetById(int id)
         {

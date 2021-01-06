@@ -10,6 +10,7 @@ using Forum_App.Containers;
 using Presentation_Layer.ViewModelConverters;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using Database_Layer.Interfaces;
 
 namespace Presentation_Layer.Controllers
 {
@@ -19,11 +20,13 @@ namespace Presentation_Layer.Controllers
         private readonly PostContainer Container;
         private readonly ReplyVMConverter replyvmconverter = new ReplyVMConverter();
         private readonly ReplyContainer replyContainer;
+        private readonly IPostUpdateContext postUpdate;
 
-        public PostController(PostContainer postcontainer, ReplyContainer replycontainer)
+        public PostController(PostContainer postcontainer, ReplyContainer replycontainer, IPostUpdateContext update)
         {
             this.Container = postcontainer;
             this.replyContainer = replycontainer;
+            this.postUpdate = update;
         }
         public IActionResult Index()
         {
@@ -50,7 +53,10 @@ namespace Presentation_Layer.Controllers
         {
             if (HttpContext.Session.GetInt32("User") != null)
             {
+                AccountDetailVM account = new AccountDetailVM();
+                account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 Post post = vmconverter.ViewModelToModel(vm);
+                post.AccountId = account.Id;
                 Container.Insert(post);
                 return RedirectToAction("Index");
             }
@@ -75,11 +81,35 @@ namespace Presentation_Layer.Controllers
 
         public IActionResult Delete(int id)
         {
-            Post p = new Post();
+            Post p = new Post(id);
             p = Container.GetById(id);
             Container.Delete(p);
             return RedirectToAction("Index");
         }
-
+        [HttpGet]
+        public IActionResult Edit(int postID)
+        {
+            if(HttpContext.Session.GetInt32("User") != null)
+            {
+                PostDetailVM vm = new PostDetailVM();
+                vm.Id = postID;
+                vm.Replies = replyvmconverter.ModelsToViewModels(replyContainer.GetAll());
+                vm = vmconverter.ModelToViewModel(Container.GetById(vm.Id));
+                return View(vm);
+            }
+            return RedirectToAction("Index", "Login");
+        }
+        [HttpPost]
+        public IActionResult Edit(PostDetailVM newVm)
+        {
+            Post post = new Post(newVm.Id);
+            Account account = JsonConvert.DeserializeObject<Account>(HttpContext.Session.GetString("User"));
+            PostDetailVM vm = new PostDetailVM();
+            vm = vmconverter.ModelToViewModel(Container.GetById(newVm.Id));
+            post = vmconverter.ViewModelToModel(vm);
+            post = vmconverter.ViewModelToModel(newVm);
+            post.Update(postUpdate);
+            return RedirectToAction("Detail", new { PostID = post.Id});
+        }
     }
 }

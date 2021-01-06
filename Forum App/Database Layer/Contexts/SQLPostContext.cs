@@ -19,7 +19,7 @@ namespace DatabaseLayer.Contexts
 
         }
 
-        public void Delete(PostDTO dto)
+        public bool Delete(PostDTO dto)
         {
             try
             {
@@ -29,6 +29,7 @@ namespace DatabaseLayer.Contexts
                     new KeyValuePair<string, string>("ID", dto.Id.ToString())
                 };
                 ExecuteSql(sql, parameters);
+                return true;
             }
             catch (Exception e)
             {
@@ -41,7 +42,7 @@ namespace DatabaseLayer.Contexts
             List<PostDTO> posts = new List<PostDTO>();
             try
             {
-                string sql = "SELECT ID, Title, PostContent, PostTime FROM Post";
+                string sql = "SELECT ID, Title, PostContent, PostTime, AccountID FROM Post";
 
                 DataSet results = ExecuteSql(sql, new List<KeyValuePair<string, string>>());
 
@@ -62,7 +63,7 @@ namespace DatabaseLayer.Contexts
         {
             try
             {
-                string sql = "SELECT ID, Title, PostContent, PostTime FROM Post WHERE ID = @ID";
+                string sql = "SELECT ID, Title, PostContent, PostTime, AccountID FROM Post WHERE ID = @ID";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("ID", id.ToString()),
@@ -81,15 +82,35 @@ namespace DatabaseLayer.Contexts
         {
             try
             {
-                string sql = "INSERT INTO Post(Title, PostContent, PostTime) OUTPUT INSERTED.ID VALUES(@Title, @PostContent, CURRENT_TIMESTAMP)";
+                string sql = "INSERT INTO Post(Title, PostContent, PostTime, AccountID) OUTPUT INSERTED.ID VALUES(@Title, @PostContent, CURRENT_TIMESTAMP, @Account_ID)";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("Title", dto.Title),
                     new KeyValuePair<string, string>("PostContent", dto.PostContent),
+                    new KeyValuePair<string, string>("Account_ID", dto.AccountId.ToString()),
                 };
                 int result = ExecuteInsert(sql, parameters);
                 return result;
 
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+        }
+        public bool PostUpdate(PostDTO dto)
+        {
+            try
+            {
+                string sql = "UPDATE Post SET Title = @Title, PostContent = @PostContent WHERE ID = @Id";
+                List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>
+                {
+                    new KeyValuePair<string, string>("Id", dto.Id.ToString()),
+                    new KeyValuePair<string, string>("Title", dto.Title),
+                    new KeyValuePair<string, string>("PostContent", dto.PostContent),
+                };
+                ExecuteUpdate(sql, parameters);
+                return true;
             }
             catch(Exception e)
             {
