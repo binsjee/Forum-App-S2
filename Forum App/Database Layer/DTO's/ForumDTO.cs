@@ -15,6 +15,15 @@ namespace Database_Layer.DTO_s
         {
 
         }
+
+        public ForumDTO(int id, string title, string description, int creatorID)
+        {
+            Id = id;
+            Title = title;
+            Description = description;
+            CreatorID = creatorID;
+        }
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

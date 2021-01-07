@@ -9,11 +9,15 @@ namespace Forum_app_unit_tests.Stubs
 {
     class ReplyContextStub : IReplyContext
     {
-        public ReplyDTO test;
-        public List<ReplyDTO> tests;
+        private List<ReplyDTO> tests = new List<ReplyDTO>()
+        {
+
+        }
+        ;
         public bool Delete(ReplyDTO dto)
         {
-            if (test == null)
+            tests.Add(dto);
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
@@ -22,30 +26,33 @@ namespace Forum_app_unit_tests.Stubs
 
         public List<ReplyDTO> GetAll()
         {
+            ReplyDTO dto = new ReplyDTO(1, "Content", false, 1, 1, "binsjee");
+            tests.Add(dto);
             if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            tests.Add(new ReplyDTO(1));
             return tests;
         }
 
         public ReplyDTO GetById(int id)
         {
-            if (test == null)
+            tests.Add(new ReplyDTO(1, "Content", false, 1, 1, "binsjee"));
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return test;
+            return tests[0];
         }
 
         public long Insert(ReplyDTO dto)
         {
-            if (test == null)
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return 0;
+            tests.Add(dto);
+            return tests[0].Id;
         }
     }
 }

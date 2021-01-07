@@ -15,13 +15,7 @@ namespace Business_Layer.DTOConverters
             List<Message> messages = new List<Message>();
             foreach(MessageDTO dto in DTOs)
             {
-                Message message = new Message();
-                message.Id = dto.Id;
-                message.Title = dto.Title;
-                message.MessageContent = dto.MessageContent;
-                message.MessageTime = dto.MessageTime;
-                message.SenderId = dto.SenderId;
-                message.ReceiverId = dto.ReceiverId;
+                Message message = new Message(dto.Id, dto.Title, dto.MessageContent,dto.MessageTime,dto.SenderId, dto.ReceiverId);
                 messages.Add(message);
             }
             return messages;
@@ -29,15 +23,7 @@ namespace Business_Layer.DTOConverters
 
         public Message DtoToModel(MessageDTO dto)
         {
-            Message message = new Message()
-            {
-                Id = dto.Id,
-                Title = dto.Title,
-                MessageContent = dto.MessageContent,
-                MessageTime = dto.MessageTime,
-                SenderId = dto.SenderId,
-                ReceiverId = dto.ReceiverId,
-            };
+            Message message = new Message(dto.Id,dto.Title,dto.MessageContent,dto.MessageTime,dto.SenderId,dto.ReceiverId);
             return message;
         }
 

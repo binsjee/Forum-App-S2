@@ -9,54 +9,66 @@ namespace Forum_app_unit_tests.Stubs
 {
     class MessageContextStub : IMessageContext
     {
-        public MessageDTO test;
-        public List<MessageDTO> tests;
+        private List<MessageDTO> tests = new List<MessageDTO>()
+        {
+
+        }
+        ;
         public List<MessageDTO> GetAll()
         {
+            MessageDTO dto = new MessageDTO(1, "title", "content", 1, 1);
+            tests.Add(dto);
             if(tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            tests.Add(new MessageDTO(1));
             return tests;
         }
 
         public List<MessageDTO> GetAllByReceiver(int id)
         {
-            if(tests == null)
+            string date = "2020-12-12";
+            DateTime DateParsed = DateTime.Parse(date);
+            MessageDTO dto = new MessageDTO(1, "title", "content",DateParsed, 1, 1);
+            tests.Add(dto);
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            tests.Add(new MessageDTO(1));
             return tests;
         }
 
         public List<MessageDTO> GetAllBySender(int id)
         {
+            string date = "2020-12-12";
+            DateTime DateParsed = DateTime.Parse(date);
+            MessageDTO dto = new MessageDTO(1, "title", "content",DateParsed, 1, 1);
+            tests.Add(dto);
             if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            tests.Add(new MessageDTO(1));
             return tests;
         }
 
         public MessageDTO GetById(int id)
         {
-            if(test == null)
+            tests.Add(new MessageDTO(1, "title", "content", 1, 2));
+            if(tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return test;
+            return tests[0];
         }
 
         public long Insert(MessageDTO dto)
         {
-            if (test == null)
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return 0;
+            tests.Add(dto);
+            return tests[0].Id;
         }
     }
 }

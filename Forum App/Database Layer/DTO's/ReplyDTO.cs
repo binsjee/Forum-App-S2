@@ -22,5 +22,25 @@ namespace Database_Layer.DTO_s
         {
 
         }
+
+        public ReplyDTO(int id, string replyContent, bool pinned, DateTime reactionTime, int postId, int accountId, string username)
+        {
+            Id = id;
+            ReplyContent = replyContent;
+            Pinned = pinned;
+            ReactionTime = reactionTime;
+            PostId = postId;
+            AccountId = accountId;
+            Username = username;
+        }
+        public ReplyDTO(int id, string replyContent, bool pinned, int postId, int accountId, string username)
+        {
+            Id = id;
+            ReplyContent = replyContent;
+            Pinned = pinned;
+            PostId = postId;
+            AccountId = accountId;
+            Username = username;
+        }
     }
 }

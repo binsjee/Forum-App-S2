@@ -14,7 +14,7 @@ namespace Business_Layer.DTOConverters
             List<Forum> forums = new List<Forum>();
             foreach(ForumDTO dto in DTOs)
             {
-                Forum forum = new Forum(dto.Id);
+                Forum forum = new Forum(dto.Id, dto.Title, dto.Description, dto.CreationDate, dto.CreatorID);
                 forum.Title = dto.Title;
                 forum.Description = dto.Description;
                 forum.Image = dto.Image;
@@ -27,14 +27,7 @@ namespace Business_Layer.DTOConverters
 
         public Forum DtoToModel(ForumDTO dto)
         {
-            Forum forum = new Forum(dto.Id)
-            {
-                Title = dto.Title,
-                Description = dto.Description,
-                Image = dto.Image,
-                CreationDate = dto.CreationDate,
-                CreatorID = dto.CreatorID,
-            };
+            Forum forum = new Forum(dto.Id, dto.Title, dto.Description, dto.CreationDate, dto.CreatorID);
             return forum;
         }
 

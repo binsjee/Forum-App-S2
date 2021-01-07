@@ -32,5 +32,13 @@ namespace Database_Layer.DTO_s
             SenderId = senderId;
             ReceiverId = receiverId;
         }
+        public MessageDTO(int id, string title, string messageContent, int senderId, int receiverId)
+        {
+            Id = id;
+            Title = title;
+            MessageContent = messageContent;
+            SenderId = senderId;
+            ReceiverId = receiverId;
+        }
     }
 }

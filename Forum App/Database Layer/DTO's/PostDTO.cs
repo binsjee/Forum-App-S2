@@ -23,5 +23,14 @@ namespace Database_Layer.DTO_s
         {
 
         }
+
+        public PostDTO(int id, string title, string postContent, int accountId, int forumId)
+        {
+            Id = id;
+            Title = title;
+            PostContent = postContent;
+            AccountId = accountId;
+            ForumId = forumId;
+        }
     }
 }

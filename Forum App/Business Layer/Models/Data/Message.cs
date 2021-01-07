@@ -7,6 +7,16 @@ namespace Forum_App.Models.Data
 {
     public class Message
     {
+        public Message(int id, string title, string messageContent, DateTime messageTime, int senderId, int receiverId)
+        {
+            Id = id;
+            Title = title;
+            MessageContent = messageContent;
+            MessageTime = messageTime;
+            SenderId = senderId;
+            ReceiverId = receiverId;
+        }
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string MessageContent { get; set; }

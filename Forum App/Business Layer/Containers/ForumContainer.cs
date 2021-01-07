@@ -34,10 +34,9 @@ namespace Forum_App.Containers
         }
         public Forum GetById(int id)
         {
-            Forum forum = new Forum(id);
             ForumDTO dto = new ForumDTO();
             dto = context.GetById(id);
-            forum = converter.DtoToModel(dto);
+            Forum forum = converter.DtoToModel(dto);
             return forum;
         }
     }

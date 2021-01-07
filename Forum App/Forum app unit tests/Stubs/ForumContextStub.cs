@@ -9,34 +9,39 @@ namespace Forum_app_unit_tests.Stubs
 {
     class ForumContextStub : IForumContext
     {
-        public ForumDTO test;
-        public List<ForumDTO> tests;
+        private List<ForumDTO> tests = new List<ForumDTO>()
+        {
 
+        }
+        ;
         public List<ForumDTO> GetAll()
         {
+            ForumDTO dto = new ForumDTO(1, "General", "Description", 1);
+            tests.Add(dto);
             if(tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            tests.Add(new ForumDTO(1));
             return tests;
         }
         public ForumDTO GetById(int id)
         {
-            if (test == null)
+            tests.Add(new ForumDTO(1, "General", "Description", 1));
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return test;
+            return tests[0];
         }
 
         public long Insert(ForumDTO dto)
         {
-            if (test == null)
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return 0;
+            tests.Add(dto);
+            return tests[0].Id;
         }
     }
 }

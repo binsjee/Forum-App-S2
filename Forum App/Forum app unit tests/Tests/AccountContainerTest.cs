@@ -12,47 +12,45 @@ namespace Forum_app_unit_tests
 {
     public class AccountContainerTest
     {
-        private AccountDTOConverter accountConverter = new AccountDTOConverter();
-        private static AccountContextStub accountContextStub = new AccountContextStub();
-        private AccountContainer accountContainer = new AccountContainer(accountContextStub);
+        private AccountDTOConverter converter = new AccountDTOConverter();
+        private static AccountContextStub Stub = new AccountContextStub();
+        private AccountContainer container = new AccountContainer(Stub);
         [Theory]
-        [InlineData(1)]
-        public void AccountGetByIdTest(int id)
+        [InlineData(1, "Vince", "Heesters", "vincietjeu@hotmail.nl", "nee", "binsjee", true)]
+        public void AccountGetByIdTest(int id, string firstname, string lastname, string email, string password, string username, bool admin)
         {
-            accountContextStub.TestDTO = new AccountDTO(id);
-            AccountDTO account = accountConverter.ModelToDTO(accountContainer.GetById(accountContextStub.TestDTO.Id));
+            AccountDTO dto = new AccountDTO(id, firstname, lastname, email, password, username, admin);
 
-            accountContextStub.TestDTO.Should().BeEquivalentTo(account);
+            AccountDTO result = converter.ModelToDTO(container.GetById(id));
+
+            dto.Should().BeEquivalentTo(result);
         }
         [Fact]
         public void AccountGetAllTest()
         {
-            accountContextStub.TestDTOs = new List<AccountDTO>();
-            foreach(Account a in accountContainer.GetAll())
-            {
-                accountContextStub.TestDTOs.Add(accountConverter.ModelToDTO(a));
-            }
+            List<Account> accounts = container.GetAll();
 
-            Assert.Empty(accountContextStub.TestDTOs);
+            Assert.NotEmpty(accounts);
         }
         [Theory]
-        [InlineData(1)]
-        public void AccountGetByNameTest(int id)
+        [InlineData(1, "Vince", "Heesters", "vincietjeu@hotmail.nl", "nee", "binsjee", true)]
+        public void AccountGetByNameTest(int id, string firstname, string lastname, string email, string password, string username, bool admin)
         {
-            accountContextStub.TestDTO = new AccountDTO(id);
-            AccountDTO account = accountConverter.ModelToDTO(accountContainer.GetByName(accountConverter.DtoToModel(accountContextStub.TestDTO)));
+            AccountDTO dto = new AccountDTO(id, firstname, lastname, email, password, username, admin);
 
-            accountContextStub.TestDTO.Should().BeEquivalentTo(account);
+            AccountDTO result = converter.ModelToDTO(container.GetByName(converter.DtoToModel(dto)));
+
+            dto.Should().BeEquivalentTo(result);
         }
         [Theory]
-        [InlineData(1, "Vince", "Heesters", "vincietjeu@hotmail.nl", "Test", "binsjee", false)]
+        [InlineData(1, "Vince", "Heesters", "vincietjeu@hotmail.nl", "nee", "binsjee", true)]
         public void AccountInsertTest(int id, string firstname, string lastname, string email, string password, string username, bool admin)
         {
-            accountContextStub.TestDTO = new AccountDTO(id, firstname, lastname, email, password, username, admin);
+            long result = container.Insert(new Account(id, firstname, lastname, email, password, username, admin));
 
-            long result = accountContainer.Insert(accountConverter.DtoToModel(accountContextStub.TestDTO));
+            Account account = container.GetById(1);
 
-            Assert.Equal(0, result);
+            Assert.Equal(account.Id, result);
         }
     }
 }

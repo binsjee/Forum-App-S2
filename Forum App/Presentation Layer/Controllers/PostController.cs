@@ -87,9 +87,8 @@ namespace Presentation_Layer.Controllers
         }
 
         public IActionResult Delete(int id)
-        {
-            Post p = new Post(id);
-            p = Container.GetById(id);
+        {          
+            Post p = Container.GetById(id);
             Container.Delete(p);
             return RedirectToAction("Index");
         }
@@ -109,11 +108,10 @@ namespace Presentation_Layer.Controllers
         [HttpPost]
         public IActionResult Edit(PostDetailVM newVm)
         {
-            Post post = new Post(newVm.Id);
             Account account = JsonConvert.DeserializeObject<Account>(HttpContext.Session.GetString("User"));
             PostDetailVM vm = new PostDetailVM();
             vm = vmconverter.ModelToViewModel(Container.GetById(newVm.Id));
-            post = vmconverter.ViewModelToModel(vm);
+            Post post = vmconverter.ViewModelToModel(vm);
             post = vmconverter.ViewModelToModel(newVm);
             post.Update(postUpdate);
             return RedirectToAction("Detail", new { PostID = post.Id});

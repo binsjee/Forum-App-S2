@@ -67,11 +67,7 @@ namespace Presentation_Layer.ViewModelConverters
             List<Forum> forums = new List<Forum>();
             foreach(ForumDetailVM vm in viewmodels)
             {
-                Forum forum = new Forum(vm.Id);
-                forum.Title = vm.Title;
-                forum.Description = vm.Description;
-                forum.CreationDate = vm.CreationDate;
-                forum.CreatorID = vm.CreatorID;
+                Forum forum = new Forum(vm.Id, vm.Title, vm.Description, vm.CreationDate, vm.CreatorID);
                 forums.Add(forum);
             }
             return forums;
@@ -79,13 +75,7 @@ namespace Presentation_Layer.ViewModelConverters
 
         public Forum ViewModelToModel(ForumDetailVM viewmodel)
         {
-            Forum forum = new Forum(viewmodel.Id)
-            {
-                Title = viewmodel.Title,
-                Description = viewmodel.Description,
-                CreationDate = viewmodel.CreationDate,
-                CreatorID = viewmodel.CreatorID,
-            };
+            Forum forum = new Forum(viewmodel.Id, viewmodel.Title, viewmodel.Description, viewmodel.CreationDate, viewmodel.CreatorID);
             return forum;
         }
     }

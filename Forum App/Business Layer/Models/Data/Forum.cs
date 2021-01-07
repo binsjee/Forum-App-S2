@@ -7,9 +7,13 @@ namespace Forum_App.Models.Data
 {
     public class Forum
     {
-        public Forum(int id)
+        public Forum(int id, string title, string description, DateTime creationdate, int creatorID)
         {
             Id = id;
+            Title = title;
+            Description = description;
+            CreationDate = creationdate;
+            CreatorID = creatorID;
         }
 
         public int Id { get; set; }

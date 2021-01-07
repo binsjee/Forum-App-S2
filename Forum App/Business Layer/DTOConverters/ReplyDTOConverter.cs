@@ -16,14 +16,7 @@ namespace Business_Layer.DTOConverters
             List<Reply> replies = new List<Reply>();
             foreach (ReplyDTO dto in DTOs)
             {
-                Reply reply = new Reply();
-                reply.Id = dto.Id;
-                reply.ReplyContent = dto.ReplyContent;
-                reply.Pinned = dto.Pinned;
-                reply.ReactionTime = dto.ReactionTime;
-                reply.PostId = dto.PostId;
-                reply.AccountId = dto.AccountId;
-                reply.Username = dto.Username;
+                Reply reply = new Reply(dto.Id, dto.ReplyContent,dto.Pinned,dto.ReactionTime,dto.PostId,dto.AccountId,dto.Username);
                 replies.Add(reply);
             }
             return replies;
@@ -31,16 +24,7 @@ namespace Business_Layer.DTOConverters
 
         public Reply DtoToModel(ReplyDTO dto)
         {
-            Reply reply = new Reply()
-            {
-                Id = dto.Id,
-                ReplyContent = dto.ReplyContent,
-                Pinned = dto.Pinned,
-                ReactionTime = dto.ReactionTime,
-                PostId = dto.PostId,
-                AccountId = dto.PostId,
-                Username = dto.Username,
-            };
+            Reply reply = new Reply(dto.Id,dto.ReplyContent,dto.Pinned,dto.ReactionTime,dto.PostId,dto.AccountId,dto.Username);
             return reply;
         }
 

@@ -36,10 +36,9 @@ namespace Forum_App.Containers
         }
         public Post GetById(int id)
         {
-            Post post = new Post(id);
             PostDTO dto = new PostDTO();
             dto = context.GetById(id);
-            post = converter.DtoToModel(dto);
+            Post post = converter.DtoToModel(dto);
             return post;
         }
         public bool Delete(Post post)

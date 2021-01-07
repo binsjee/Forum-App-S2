@@ -17,30 +17,49 @@ namespace Forum_app_unit_tests.Tests
         private static MessageContextStub stub = new MessageContextStub();
         private MessageContainer container = new MessageContainer(stub);
         [Theory]
-        [InlineData(1)]
-        public void MessageGetAllBySenderTest(int id)
+        [InlineData(1, "title", "content","2020-12-12", 1, 1)]
+        public void MessageGetAllBySenderTest(int id, string title, string description,string date, int senderid, int receiverid)
         {
-            stub.tests = new List<MessageDTO>();
-            List<Message> messages = container.GetAllBySender(id);
-            Assert.NotEmpty(messages);
+            DateTime DateParsed = DateTime.Parse(date);
+            List<Message> messages = new List<Message>() { new Message(id, title, description, DateParsed, senderid, receiverid) };
+
+            List<Message> results = container.GetAllBySender(senderid);
+
+            messages.Should().BeEquivalentTo(results);
         }
 
         [Theory]
-        [InlineData(1)]
-        public void MessageGetAllByReceiverTest(int id)
+        [InlineData(1, "title", "content", "2020-12-12", 1, 1)]
+        public void MessageGetAllByReceiverTest(int id, string title, string description,string date, int senderid, int receiverid)
         {
-            stub.tests = new List<MessageDTO>();
-            List<Message> messages = container.GetAllByReceiver(id);
-            Assert.NotEmpty(messages);
-        }
-        [Fact]
-        public void MessageInsertTest()
-        {
-            stub.test = new MessageDTO();
-            Message message = converter.DtoToModel(stub.test);
-            long result = container.Insert(message);
+            DateTime DateParsed = DateTime.Parse(date);
+            List<Message> messages = new List<Message>() { new Message(id, title, description, DateParsed, senderid, receiverid) };
 
-            Assert.Equal(0, result);
+            List<Message> results = container.GetAllBySender(receiverid);
+
+            messages.Should().BeEquivalentTo(results);
+        }
+        [Theory]
+        [InlineData(1, "title", "content", "2020-12-12", 1, 1)]
+        public void MessageInsertTest(int id, string title, string description, string date, int senderid, int receiverid)
+        {
+            DateTime DateParsed = DateTime.Parse(date);
+            long result = container.Insert(new Message(id, title, description, DateParsed, senderid, receiverid));
+
+            Message m = container.GetById(1);
+
+            Assert.Equal(m.Id, result);
+        }
+        [Theory]
+        [InlineData(1, "title", "content", "2020-12-12", 1, 1)]
+        public void MessageGetById(int id, string title, string description, string date, int senderid, int receiverid)
+        {
+            DateTime DateParsed = DateTime.Parse(date);
+            MessageDTO dto = new MessageDTO(id, title, description, DateParsed, senderid, receiverid);
+
+            MessageDTO result = converter.ModelToDTO(container.GetById(id));
+
+            dto.Should().BeEquivalentTo(result);
         }
     }
 }

@@ -41,5 +41,12 @@ namespace Forum_App.Containers
             dto = converter.ModelToDTO(message);
             return context.Insert(dto);
         }
+        public Message GetById(int id)
+        {
+            MessageDTO dto = new MessageDTO();
+            dto = context.GetById(id);
+            Message message = converter.DtoToModel(dto);
+            return message;
+        }
     }
 }

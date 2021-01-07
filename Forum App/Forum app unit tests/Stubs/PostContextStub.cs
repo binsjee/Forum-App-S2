@@ -10,49 +10,58 @@ namespace Forum_app_unit_tests.Stubs
 {
     class PostContextStub : IPostContext
     {
-        public PostDTO test;
-        public List<PostDTO> tests;
+        //public PostDTO test;
+        private List<PostDTO> tests = new List<PostDTO>()
+        {
+            //new PostDTO(1, "Titel", "Description", 1, 1)
+        }
+        ;
 
         public bool Delete(PostDTO dto)
         {
-            if (test == null)
-            {
-                throw new NullReferenceException("No value returned");
-            }
-            return true; ;
-        }
-
-        public List<PostDTO> GetAll()
-        {
+            tests.Add(dto);
             if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            tests.Add(new PostDTO(1));
+            return true;
+        }
+
+        public List<PostDTO> GetAll()
+        {
+            PostDTO dto = new PostDTO(1, "Titel", "Description", 1, 1);
+            tests.Add(dto);
+            if (tests == null)
+            {
+                throw new NullReferenceException("No value returned");
+            }
             return tests;
         }
 
         public PostDTO GetById(int id)
         {
-            if (test == null)
+            tests.Add(new PostDTO(1, "Titel", "Description", 1, 1));
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return test;
+            return tests[0];
         }
 
         public long Insert(PostDTO dto)
         {
-            if (test == null)
+            if(tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return 0;
+            tests.Add(dto);
+            return tests[0].Id;
         }
 
         public bool PostUpdate(PostDTO dto)
         {
-            if (test == null)
+            tests.Add(dto);
+            if (tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }

@@ -14,9 +14,15 @@ namespace Forum_App.Models.Data
         public string Password { get; set; }
         public string Username { get; set; }
         public bool Administrator { get; set; }
-        public Account(int id)
+        public Account(int id, string firstname, string lastname, string email, string password, string username, bool admin)
         {
             Id = id;
+            FirstName = firstname;
+            LastName = lastname;
+            Email = email;
+            Password = password;
+            Username = username;
+            Administrator = admin;
         }
     }
 }

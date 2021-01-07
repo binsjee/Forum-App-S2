@@ -14,13 +14,7 @@ namespace Business_Layer.DTOConverters
             List<Account> accounts = new List<Account>();
             foreach(AccountDTO dto in DTOs)
             {
-                Account account = new Account(dto.Id);
-                account.FirstName = dto.FirstName;
-                account.LastName = dto.LastName;
-                account.Email = dto.Email;
-                account.Password = dto.Password;
-                account.Username = dto.Username;
-                account.Administrator = dto.Administrator;
+                Account account = new Account(dto.Id, dto.FirstName, dto.LastName, dto.Email,dto.Password,dto.Username,dto.Administrator);
                 accounts.Add(account);
             }
             return accounts;
@@ -28,15 +22,7 @@ namespace Business_Layer.DTOConverters
 
         public Account DtoToModel(AccountDTO dto)
         {
-            Account account = new Account(dto.Id)
-            {
-                FirstName = dto.FirstName,
-                LastName = dto.LastName,
-                Email = dto.Email,
-                Password = dto.Password,
-                Username = dto.Username,
-                Administrator = dto.Administrator,
-            };
+            Account account = new Account(dto.Id, dto.FirstName, dto.LastName, dto.Email, dto.Password, dto.Username, dto.Administrator);
             return account;
         }
 

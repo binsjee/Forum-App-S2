@@ -9,47 +9,56 @@ namespace Forum_app_unit_tests.Stubs
 {
     class AccountContextStub : IAccountContext
     {
-        public AccountDTO TestDTO;
-        public List<AccountDTO> TestDTOs;
+        private List<AccountDTO> Tests = new List<AccountDTO>()
+        {
+
+        }
+        ;
         public List<AccountDTO> GetAll()
         {
-            if(TestDTOs == null)
+            AccountDTO dto = new AccountDTO(1, "Vince", "Heesters", "vincietjeu@hotmail.nl", "nee", "binsjee", true);
+            Tests.Add(dto);
+            if(Tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return TestDTOs;
+            return Tests;
         }
 
         public AccountDTO GetById(int id)
         {
-            if(TestDTO == null)
+            Tests.Add(new AccountDTO(1, "Vince", "Heesters", "vincietjeu@hotmail.nl", "nee", "binsjee", true));
+            if(Tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return TestDTO;
+            return Tests[0];
         }
 
         public AccountDTO GetByName(AccountDTO dto)
         {
-            if(TestDTO == null)
+            Tests.Add(new AccountDTO(1, "Vince", "Heesters", "vincietjeu@hotmail.nl", "nee", "binsjee", true));
+            if (Tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return TestDTO;
+            return Tests[0];
         }
 
         public long Insert(AccountDTO dto)
         {
-            if(TestDTO == null)
+            if(Tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }
-            return 0;
+            Tests.Add(dto);
+            return Tests[0].Id;
         }
 
         public bool Update(AccountDTO a)
         {
-            if(TestDTO == null)
+            Tests.Add(a);
+            if(Tests == null)
             {
                 throw new NullReferenceException("No value returned");
             }

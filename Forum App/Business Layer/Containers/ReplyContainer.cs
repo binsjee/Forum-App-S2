@@ -19,8 +19,7 @@ namespace Forum_App.Containers
         }
         public long Insert(Reply reply)
         {
-            ReplyDTO dto = new ReplyDTO();
-            dto = converter.ModelToDTO(reply);
+            ReplyDTO dto = converter.ModelToDTO(reply);
             return context.Insert(dto);
         }
         public List<Reply> GetAll()
@@ -40,10 +39,9 @@ namespace Forum_App.Containers
         }
         public Reply GetById(int id)
         {
-            Reply reply = new Reply();
-            ReplyDTO dto = new ReplyDTO();
+            ReplyDTO dto = new ReplyDTO(); 
             dto = context.GetById(id);
-            reply = converter.DtoToModel(dto);
+            Reply reply = converter.DtoToModel(dto);
             return reply;
         }
     }

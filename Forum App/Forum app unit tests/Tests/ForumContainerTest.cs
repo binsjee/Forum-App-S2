@@ -20,31 +20,32 @@ namespace Forum_app_unit_tests.Tests
         [Fact]
         public void ForumGetAllTest()
         {
-            stub.tests = new List<ForumDTO>();
-
             List<Forum> forums = container.GetAll();
 
             Assert.NotEmpty(forums);
         }
         [Theory]
-        [InlineData(1)]
-        public void ForumGetByIdTest(int id)
+        [InlineData(1, "General", "Description",1)]
+        public void ForumGetByIdTest(int id,string title, string description, int creatorid)
         {
-            stub.test = new ForumDTO(id);
+            ForumDTO dto = new ForumDTO(id, title, description, creatorid);
 
-            ForumDTO result = converter.ModelToDTO(container.GetById(stub.test.Id));
+            ForumDTO result = converter.ModelToDTO(container.GetById(id));
 
-            stub.test.Should().BeEquivalentTo(result);
+            dto.Should().BeEquivalentTo(result);
         }
 
-        [Fact]
-        public void ForumInsertTest()
+        [Theory]
+        [InlineData(1, "Titel", "Description", "2020-12-12", 1)]
+        public void ForumInsertTest(int id, string title, string description, string date, int creatorid)
         {
-            stub.test = new ForumDTO();
-            Forum forum = converter.DtoToModel(stub.test);
-            long result = container.Insert(forum);
+            DateTime DateParsed = DateTime.Parse(date); 
 
-            Assert.Equal(0, result);
+            long result = container.Insert(new Forum(id, title, description, DateParsed,creatorid));
+
+            Forum f = container.GetById(1);
+
+            Assert.Equal(f.Id, result);
         }
     }
 }

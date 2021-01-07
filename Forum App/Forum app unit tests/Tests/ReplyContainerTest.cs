@@ -20,37 +20,38 @@ namespace Forum_app_unit_tests.Tests
         [Fact]
         public void ReplyGetAllTest()
         {
-            stub.tests = new List<ReplyDTO>();
 
             List<Reply> replies = container.GetAll();
 
             Assert.NotEmpty(replies);
         }
         [Theory]
-        [InlineData(1)]
-        public void ReplyGetByIdTest(int id)
+        [InlineData(1, "Content", false, 1, 1, "binsjee")]
+        public void ReplyGetByIdTest(int id, string content, bool pinned, int postid, int accountid, string username)
         {
-            stub.test = new ReplyDTO(id);
+            ReplyDTO dto = new ReplyDTO(id, content, pinned, postid, accountid, username);
 
-            ReplyDTO result = converter.ModelToDTO(container.GetById(stub.test.Id));
+            ReplyDTO result = converter.ModelToDTO(container.GetById(id));
 
-            stub.test.Should().BeEquivalentTo(result);
+            dto.Should().BeEquivalentTo(result);
         }
-        [Fact]
-        public void ReplyInsertTest()
+        [Theory]
+        [InlineData(1, "Content", false,"2020-12-12", 1, 1, "binsjee")]
+        public void ReplyInsertTest(int id, string content, bool pinned, string date, int postid, int accountid, string username)
         {
-            stub.test = new ReplyDTO();
-            Reply reply = converter.DtoToModel(stub.test);
-            long result = container.Insert(reply);
+            DateTime DateParsed = DateTime.Parse(date);
+            long result = container.Insert(new Reply(id, content, pinned, DateParsed, postid, accountid, username));
 
-            Assert.Equal(0, result);
+            Reply r = container.GetById(1);
+
+            Assert.Equal(r.Id, result);
         }
-        [Fact]
-        public void ReplyDeleteTest()
+        [Theory]
+        [InlineData(1, "Content", false, "2020-12-12", 1, 1, "binsjee")]
+        public void ReplyDeleteTest(int id, string content, bool pinned, string date, int postid, int accountid, string username)
         {
-            stub.test = new ReplyDTO();
-            Reply reply = converter.DtoToModel(stub.test);
-            bool result = container.Delete(reply);
+            DateTime DateParsed = DateTime.Parse(date);
+            bool result = container.Delete(new Reply(id, content, pinned, DateParsed, postid, accountid, username));
 
             Assert.True(result);
         }

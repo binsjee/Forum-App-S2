@@ -21,37 +21,38 @@ namespace Forum_app_unit_tests.Tests
         [Fact]
         public void PostGetAllTest()
         {
-            stub.tests = new List<PostDTO>();
 
             List<Post> posts = container.GetAll();
 
             Assert.NotEmpty(posts);
         }
         [Theory]
-        [InlineData(1)]
-        public void PostGetByIdTest(int id)
+        [InlineData(1, "Titel", "Description", 1, 1)]
+        public void PostGetByIdTest(int id, string title, string description,int accountid, int forumid)
         {
-            stub.test = new PostDTO(id);
+            PostDTO dto = new PostDTO(id, title, description, accountid, forumid);
 
-            PostDTO result = converter.ModelToDTO(container.GetById(stub.test.Id));
+            PostDTO result = converter.ModelToDTO(container.GetById(id));
 
-            stub.test.Should().BeEquivalentTo(result);
+            dto.Should().BeEquivalentTo(result);
         }
-        [Fact]
-        public void PostInsertTest()
+        [Theory]
+        [InlineData(1,"Titel","Description","2020-12-12",1,1)]
+        public void PostInsertTest(int id, string title, string description, string creationtime, int accountid, int forumid)
         {
-            stub.test = new PostDTO();
-            Post post = converter.DtoToModel(stub.test);
-            long result = container.Insert(post);
+            DateTime DateParsed = DateTime.Parse(creationtime);
+            long result = container.Insert(new Post(id, title, description, DateParsed, accountid, forumid));
 
-            Assert.Equal(0, result);
+            Post p = container.GetById(1);
+
+            Assert.Equal(p.Id, result);
         }
-        [Fact]
-        public void PostDeleteTest()
+        [Theory]
+        [InlineData(1, "Titel", "Description", "2020-12-12", 1, 1)]
+        public void PostDeleteTest(int id, string title, string description, string creationtime, int accountid, int forumid)
         {
-            stub.test = new PostDTO();
-            Post post = converter.DtoToModel(stub.test);
-            bool result = container.Delete(post);
+            DateTime DateParsed = DateTime.Parse(creationtime);
+            bool result = container.Delete(new Post(id, title, description, DateParsed, accountid, forumid));
 
             Assert.True(result);
         }

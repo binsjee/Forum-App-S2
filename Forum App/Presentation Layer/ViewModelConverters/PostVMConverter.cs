@@ -70,11 +70,7 @@ namespace Presentation_Layer.Converters
             List<Post> posts = new List<Post>();
             foreach(PostDetailVM vm in viewmodels)
             {
-                Post post = new Post(vm.Id);
-                post.Title = vm.Title;
-                post.PostContent = vm.PostContent;
-                post.AccountId = vm.AccountId;
-                post.ForumId = vm.ForumId;
+                Post post = new Post(vm.Id, vm.Title, vm.PostContent, vm.PostTime, vm.AccountId,vm.ForumId);
                 posts.Add(post);
             }
             return posts;
@@ -82,14 +78,7 @@ namespace Presentation_Layer.Converters
 
         public Post ViewModelToModel(PostDetailVM viewmodel)
         {
-            Post post = new Post(viewmodel.Id)
-            {
-                Title = viewmodel.Title,
-                PostContent = viewmodel.PostContent,
-                AccountId = viewmodel.AccountId,
-                ForumId = viewmodel.ForumId,
-                
-            };
+            Post post = new Post(viewmodel.Id, viewmodel.Title, viewmodel.PostContent, viewmodel.PostTime, viewmodel.AccountId, viewmodel.ForumId);
             return post;
         }
     }

@@ -10,9 +10,14 @@ namespace Forum_App.Models.Data
 {
     public class Post
     {
-        public Post(int id)
+        public Post(int id, string title, string postcontent, DateTime posttime, int accountid ,int forumid)
         {
             Id = id;
+            Title = title;
+            PostContent = postcontent;
+            PostTime = posttime;
+            AccountId = accountid;
+            ForumId = forumid;
         }
 
         public int Id { get; set; }
