@@ -49,14 +49,7 @@ namespace Presentation_Layer.ViewModelConverters
             List<Reply> replies = new List<Reply>();
             foreach(ReplyDetailVM vm in viewmodels)
             {
-                Reply reply = new Reply();
-                reply.Id = vm.Id;
-                reply.ReplyContent = vm.ReplyContent;
-                reply.Pinned = vm.Pinned;
-                reply.ReactionTime = vm.ReactionTime;
-                reply.PostId = vm.PostId;
-                reply.AccountId = vm.AccountId;
-                reply.Username = vm.Username;
+                Reply reply = new Reply(vm.Id, vm.ReplyContent,vm.Pinned,vm.ReactionTime,vm.PostId, vm.AccountId, vm.Username);
                 replies.Add(reply);
             }
             return replies;
@@ -64,16 +57,7 @@ namespace Presentation_Layer.ViewModelConverters
 
         public Reply ViewModelToModel(ReplyDetailVM viewmodel)
         {
-            Reply reply = new Reply()
-            {
-                Id = viewmodel.Id,
-                ReplyContent = viewmodel.ReplyContent,
-                Pinned = viewmodel.Pinned,
-                ReactionTime = viewmodel.ReactionTime,
-                PostId = viewmodel.PostId,
-                AccountId = viewmodel.AccountId,
-                Username = viewmodel.Username,
-            };
+            Reply reply = new Reply(viewmodel.Id,viewmodel.ReplyContent, viewmodel.Pinned,viewmodel.ReactionTime,viewmodel.PostId,viewmodel.AccountId,viewmodel.Username);
             return reply;
         }
     }

@@ -17,7 +17,7 @@ namespace Forum_App.Models.Data
             ReceiverId = receiverId;
         }
 
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public string Title { get; set; }
         public string MessageContent { get; set; }
         public DateTime MessageTime { get; set; }

@@ -73,8 +73,7 @@ namespace Presentation_Layer.Controllers
                 account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 if (account.Administrator)
                 {
-                    Reply r = new Reply();
-                    r = replyContainer.GetById(id);
+                    Reply r = replyContainer.GetById(id);
                     replyContainer.Delete(r);
                     int postID = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("Id"));
                     return Redirect("~/Post/Detail/?postID=" + postID);

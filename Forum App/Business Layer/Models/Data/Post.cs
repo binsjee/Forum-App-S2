@@ -20,7 +20,7 @@ namespace Forum_App.Models.Data
             ForumId = forumid;
         }
 
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public string Title { get; set; }
         public string PostContent { get; set; }
         public DateTime PostTime { get; set; }

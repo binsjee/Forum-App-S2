@@ -19,7 +19,7 @@ namespace Forum_App.Models.Data
             Username = username;
         }
 
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public string ReplyContent { get; set; }
         public bool Pinned { get; set; }
         public DateTime ReactionTime { get; set; }
