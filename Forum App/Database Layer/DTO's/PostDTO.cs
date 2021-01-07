@@ -12,8 +12,8 @@ namespace Database_Layer.DTO_s
         public string PostContent { get; set; }
         public DateTime PostTime { get; set; }
         public int AccountId { get; set; }
+        public int ForumId { get; set; }
 
-        public ForumDTO Forum { get; set; }
         public List<ReplyDTO> Replies { get; set; }
         public PostDTO(int id)
         {

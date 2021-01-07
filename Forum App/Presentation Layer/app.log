@@ -1342,3 +1342,42 @@ Error Number:515,State:2,Class:16
 2021-01-06T22:28:44.6303452+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
 2021-01-06T22:28:44.6389282+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
 2021-01-06T22:28:44.6422264+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: C:\Users\vinci\OneDrive\Documenten\Forum-App-S2\Forum App\Presentation Layer
+2021-01-07T10:58:19.6019426+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2021-01-07T10:58:19.6718778+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2021-01-07T10:58:19.6811919+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2021-01-07T11:01:57.2321399+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2021-01-07T11:01:57.2398962+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2021-01-07T11:01:57.2426731+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2021-01-07T11:12:36.7202748+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2021-01-07T11:12:36.7321114+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Development
+2021-01-07T11:12:36.7356205+01:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer
+2021-01-07T11:18:59.6975349+01:00	FAIL	[Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware]	[UnhandledException]	An unhandled exception has occurred while executing the request.System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@ForumID".
+   at DatabaseLayer.Contexts.SQLPostContext.Insert(PostDTO dto)
+   at Forum_App.Containers.PostContainer.Insert(Post post) in B:\documenten\S2 V3\Forum App S2\Forum App\Business Layer\Containers\PostContainer.cs:line 27
+   at Presentation_Layer.Controllers.PostController.CreatePost(PostDetailVM vm) in B:\documenten\S2 V3\Forum App S2\Forum App\Presentation Layer\Controllers\PostController.cs:line 67
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:5728b9e5-9f88-4097-b835-96ca7372cd66
+Error Number:137,State:2,Class:15
+

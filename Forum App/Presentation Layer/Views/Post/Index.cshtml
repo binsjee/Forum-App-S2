@@ -20,23 +20,26 @@
             <tbody>
                 @foreach (PostDetailVM item in Model.PostViewModels)
                 {
-                    <tr>
-                    <td>
-                    @Html.ActionLink(item.Title, "Detail", new { postID = item.Id})
-                    </td>
-                    <td>
-                    @Html.DisplayFor(modelItem => item.PostContent)
-                    </td>
-                    <td>
-                    @Html.DisplayFor(modelItem => item.PostTime)
-                    </td>
-                    @if (Model.account.Administrator)
-                    {
+                    @if(item.ForumId == Model.currentForumId)
+                    {                    
+                        <tr>
                         <td>
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Id})
+                        @Html.ActionLink(item.Title, "Detail", new { postID = item.Id})
                         </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.PostContent)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.PostTime)
+                        </td>
+                        @if (Model.account.Administrator)
+                        {
+                            <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id})
+                            </td>
+                        }
+                        </tr>
                     }
-                    </tr>
                 }
         </table>
         </div>

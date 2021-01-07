@@ -22,6 +22,7 @@ namespace Presentation_Layer.Converters
                 vm.PostContent = post.PostContent;
                 vm.PostTime = post.PostTime;
                 vm.AccountId = post.AccountId;
+                vm.ForumId = post.ForumId;
                 vms.Add(vm);
             }
             return vms;
@@ -44,6 +45,7 @@ namespace Presentation_Layer.Converters
                     PostTime = model.PostTime,
                     Replies = replies,
                     AccountId = model.AccountId,
+                    ForumId = model.ForumId,
                 };
                 return vm;
             }
@@ -56,6 +58,7 @@ namespace Presentation_Layer.Converters
                     PostContent = model.PostContent,
                     PostTime = model.PostTime,
                     AccountId = model.AccountId,
+                    ForumId = model.ForumId,
                 };
                 return vm;
             }
@@ -71,6 +74,7 @@ namespace Presentation_Layer.Converters
                 post.Title = vm.Title;
                 post.PostContent = vm.PostContent;
                 post.AccountId = vm.AccountId;
+                post.ForumId = vm.ForumId;
                 posts.Add(post);
             }
             return posts;
@@ -83,6 +87,7 @@ namespace Presentation_Layer.Converters
                 Title = viewmodel.Title,
                 PostContent = viewmodel.PostContent,
                 AccountId = viewmodel.AccountId,
+                ForumId = viewmodel.ForumId,
                 
             };
             return post;

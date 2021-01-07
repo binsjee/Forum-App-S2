@@ -9,5 +9,6 @@ namespace Presentation_Layer.ViewModels
     {
         public List<PostDetailVM> PostViewModels { get; set; } = new List<PostDetailVM>();
         public AccountDetailVM account { get; set; } = new AccountDetailVM();
+        public int currentForumId { get; set; }
     }
 }

@@ -20,6 +20,7 @@ namespace Business_Layer.DTOConverters
                 post.PostContent = dto.PostContent;
                 post.PostTime = dto.PostTime;
                 post.AccountId = dto.AccountId;
+                post.ForumId = dto.ForumId;
                 posts.Add(post);
             }
             return posts;
@@ -33,6 +34,7 @@ namespace Business_Layer.DTOConverters
                 PostContent = dto.PostContent,
                 PostTime = dto.PostTime,
                 AccountId = dto.AccountId,
+                ForumId = dto.ForumId,
             };
             return post;
         }
@@ -46,6 +48,7 @@ namespace Business_Layer.DTOConverters
                 dto.Title = post.Title;
                 dto.PostContent = post.PostContent;
                 dto.AccountId = post.AccountId;
+                dto.ForumId = post.ForumId;
                 DTOs.Add(dto);
             }
             return DTOs;
@@ -60,6 +63,7 @@ namespace Business_Layer.DTOConverters
                 PostContent = model.PostContent,
                 PostTime = model.PostTime,
                 AccountId = model.AccountId,
+                ForumId = model.ForumId,
             };
             return dto;
         }

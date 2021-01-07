@@ -11,6 +11,7 @@ namespace Presentation_Layer.ViewModels
         public string PostContent { get; set; }
         public DateTime PostTime { get; set; }
         public int AccountId { get; set; }
+        public int ForumId { get; set; }
         public List<ReplyDetailVM> Replies { get; set; } = new List<ReplyDetailVM>();
         public AccountDetailVM account { get; set; } = new AccountDetailVM();
     }

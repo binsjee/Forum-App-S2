@@ -42,7 +42,7 @@ namespace DatabaseLayer.Contexts
             List<PostDTO> posts = new List<PostDTO>();
             try
             {
-                string sql = "SELECT ID, Title, PostContent, PostTime, AccountID FROM Post";
+                string sql = "SELECT ID, Title, PostContent, PostTime, AccountID, ForumID FROM Post";
 
                 DataSet results = ExecuteSql(sql, new List<KeyValuePair<string, string>>());
 
@@ -63,7 +63,7 @@ namespace DatabaseLayer.Contexts
         {
             try
             {
-                string sql = "SELECT ID, Title, PostContent, PostTime, AccountID FROM Post WHERE ID = @ID";
+                string sql = "SELECT ID, Title, PostContent, PostTime, AccountID, ForumID FROM Post WHERE ID = @ID";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("ID", id.ToString()),
@@ -82,12 +82,13 @@ namespace DatabaseLayer.Contexts
         {
             try
             {
-                string sql = "INSERT INTO Post(Title, PostContent, PostTime, AccountID) OUTPUT INSERTED.ID VALUES(@Title, @PostContent, CURRENT_TIMESTAMP, @Account_ID)";
+                string sql = "INSERT INTO Post(Title, PostContent, PostTime, AccountID, ForumID) OUTPUT INSERTED.ID VALUES(@Title, @PostContent, CURRENT_TIMESTAMP, @Account_ID, @Forum_ID)";
                 List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("Title", dto.Title),
                     new KeyValuePair<string, string>("PostContent", dto.PostContent),
                     new KeyValuePair<string, string>("Account_ID", dto.AccountId.ToString()),
+                    new KeyValuePair<string, string>("Forum_ID", dto.ForumId.ToString()),
                 };
                 int result = ExecuteInsert(sql, parameters);
                 return result;

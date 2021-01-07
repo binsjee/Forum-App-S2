@@ -20,12 +20,15 @@ namespace Presentation_Layer.Controllers
         private readonly PostContainer Container;
         private readonly ReplyVMConverter replyvmconverter = new ReplyVMConverter();
         private readonly ReplyContainer replyContainer;
+        private readonly ForumVMConverter forumvmconverter = new ForumVMConverter();
+        private readonly ForumContainer forumContainer;
         private readonly IPostUpdateContext postUpdate;
 
-        public PostController(PostContainer postcontainer, ReplyContainer replycontainer, IPostUpdateContext update)
+        public PostController(PostContainer postcontainer, ReplyContainer replycontainer, ForumContainer forumcontainer, IPostUpdateContext update)
         {
             this.Container = postcontainer;
             this.replyContainer = replycontainer;
+            this.forumContainer = forumcontainer;
             this.postUpdate = update;
         }
         public IActionResult Index()
@@ -37,8 +40,10 @@ namespace Presentation_Layer.Controllers
                 PostViewModel vm = new PostViewModel();
                 List<Post> posts = new List<Post>();
                 posts = Container.GetAll();
+                int forumId = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("forumId"));
                 //List<PostDetailVM> vms = new List<PostDetailVM>();
                 vm.PostViewModels = vmconverter.ModelsToViewModels(posts);
+                vm.currentForumId = forumId;
                 vm.account = account;
                 return View(vm);
             }
@@ -57,6 +62,8 @@ namespace Presentation_Layer.Controllers
                 account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 Post post = vmconverter.ViewModelToModel(vm);
                 post.AccountId = account.Id;
+                int forumId = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("forumId"));
+                post.ForumId = forumId;
                 Container.Insert(post);
                 return RedirectToAction("Index");
             }

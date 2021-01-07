@@ -1822,11 +1822,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Forum app unit tests\\Forum app unit tests.csproj",
+      "projectUniqueName": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Forum app unit tests\\Forum app unit tests.csproj",
       "projectName": "Forum app unit tests",
-      "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Forum app unit tests\\Forum app unit tests.csproj",
+      "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Forum app unit tests\\Forum app unit tests.csproj",
       "packagesPath": "C:\\Users\\vinci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Forum app unit tests\\obj\\",
+      "outputPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Forum app unit tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1845,11 +1845,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\Business Layer.csproj": {
-              "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Business Layer\\Business Layer.csproj"
+            "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\Business Layer.csproj": {
+              "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Business Layer\\Business Layer.csproj"
             },
-            "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Database Layer\\Database Layer.csproj": {
-              "projectPath": "C:\\Users\\vinci\\OneDrive\\Documenten\\Forum-App-S2\\Forum App\\Database Layer\\Database Layer.csproj"
+            "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Database Layer\\Database Layer.csproj": {
+              "projectPath": "B:\\documenten\\S2 V3\\Forum App S2\\Forum App\\Database Layer\\Database Layer.csproj"
             }
           }
         }
@@ -1902,7 +1902,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

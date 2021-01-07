@@ -21,8 +21,8 @@ namespace Forum_App.Models.Data
         public DateTime PostTime { get; set; }
         public long postNumber { get; set; }
         public int AccountId { get; set; }
+        public int ForumId { get; set; }
 
-        public Forum Forum { get; set; }
         public List<Reply> Replies { get; set; }
         private IPostUpdateContext postContext { get; set;}
         private readonly PostDTOConverter converter = new PostDTOConverter();

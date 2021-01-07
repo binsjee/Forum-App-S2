@@ -53,6 +53,7 @@ namespace Presentation_Layer.Controllers
                 Forum forum = forumContainer.GetById(ForumID);
                 forum.Posts = postContainer.GetAll();
                 vm = forumConverter.ModelToViewModel(forum);
+                HttpContext.Session.SetString("forumId", JsonConvert.SerializeObject(forum.Id));
                 return View(vm);
             }
             return RedirectToAction("Index", "Login");
