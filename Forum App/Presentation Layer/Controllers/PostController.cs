@@ -41,7 +41,6 @@ namespace Presentation_Layer.Controllers
                 List<Post> posts = new List<Post>();
                 posts = Container.GetAll();
                 int forumId = JsonConvert.DeserializeObject<int>(HttpContext.Session.GetString("forumId"));
-                //List<PostDetailVM> vms = new List<PostDetailVM>();
                 vm.PostViewModels = vmconverter.ModelsToViewModels(posts);
                 vm.currentForumId = forumId;
                 vm.account = account;

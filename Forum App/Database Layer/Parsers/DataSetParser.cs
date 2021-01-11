@@ -94,7 +94,6 @@ namespace DatabaseLayer.Parsers
                     Title = (string)set.Tables[0].Rows[rowIndex][1],
                     MessageContent = (string)set.Tables[0].Rows[rowIndex][2],
                     MessageTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
-                    //SenderId = (int)set.Tables[0].Rows[rowIndex][4],
                     ReceiverId = (int)set.Tables[0].Rows[rowIndex][5],
                 };
             }
@@ -113,7 +112,6 @@ namespace DatabaseLayer.Parsers
                     MessageContent = (string)set.Tables[0].Rows[rowIndex][2],
                     MessageTime = (DateTime)set.Tables[0].Rows[rowIndex][3],
                     SenderId = (int)set.Tables[0].Rows[rowIndex][4],
-                    //ReceiverId = (int)set.Tables[0].Rows[rowIndex][5],
                 };
             }
             else
@@ -129,7 +127,6 @@ namespace DatabaseLayer.Parsers
                 {
                     Title = (string)set.Tables[0].Rows[rowIndex][1],
                     Description = (string)set.Tables[0].Rows[rowIndex][2],
-                    //Image = (byte[])set.Tables[0].Rows[rowIndex][3],
                     CreationDate = (DateTime)set.Tables[0].Rows[rowIndex][4],
                     CreatorID = (int)set.Tables[0].Rows[rowIndex][5],
                 };

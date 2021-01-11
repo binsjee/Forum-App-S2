@@ -47,7 +47,6 @@
                             @if (Model.account.Administrator)
                             {                           
                                 <td>
-                                    @*<a asp-area="" asp-controller="Reply" asp-action="Delete"> <button>Delete</button></a>*@
                                     @Html.ActionLink("Delete", "Delete", "Reply", new { id = item.Id}, null)
                                 </td>
                             }

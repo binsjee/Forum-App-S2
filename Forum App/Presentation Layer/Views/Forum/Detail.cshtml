@@ -1,31 +1,46 @@
-﻿@model Presentation_Layer.ViewModels.ForumDetailVM
+﻿@using Presentation_Layer.ViewModels
+@model Presentation_Layer.ViewModels.ForumDetailVM
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Posts";
 }
+
 <body>
-    <div class="col-md-12" style="margin-bottom: 30px;">
-        <div class="row justify-content-around">
-            <h1>Welkom bij het @Model.Title forum!</h1>
-        </div>
-
-        <div class="welkomRij">
-            <div class="welkomRijContent">
-                <a asp-area="" asp-controller="Post" asp-action="Create" id="addicon" class="material-icons">add_box</a>
-            </div>
-            <div class="welkomRijContent">
-                <p>Maak een nieuwe post!</p>
-            </div>
-        </div>
-        <div class="welkomRij">
-            <div class="welkomRijContent">
-                <a asp-area="" asp-controller="Post" asp-action="Index" id="forumIcon" class="material-icons">forum</a>
-            </div>
-            <div class="welkomRijContent">
-                <p>Bekijk alle posts!</p>
-            </div>
-        </div>
-
-
+    <a asp-area="" asp-controller="Post"></a>
+    <div id="">
+        <table class="table table-striped table-hover">
+            <h1> All posts </h1>
+            <thead>
+                <tr>
+                    <th>Titel</th>
+                    <th>Content</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (PostDetailVM item in Model.posts)
+                {
+                    @if (item.ForumId == Model.Id)
+                    {
+                        <tr>
+                            <td>
+                                @Html.ActionLink(item.Title, "Detail","Post", new { postID = item.Id })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PostContent)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PostTime)
+                            </td>
+                            @if (Model.account.Administrator)
+                            {
+                                <td>
+                                    @Html.ActionLink("Delete", "Delete","Post", new { id = item.Id })
+                                </td>
+                            }
+                        </tr>
+                    }
+                }
+        </table>
     </div>
 </body>

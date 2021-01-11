@@ -10,13 +10,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using Newtonsoft.Json;
-//using System.Linq;
-//using System.Net.Http;
-//using System.Runtime.InteropServices.ComTypes;
-//using System.Threading.Tasks;
-//using System.Xml;
-//using System.Xml.Schema;
-
 using System.Text;
 
 namespace DatabaseLayer.Contexts

@@ -22,16 +22,19 @@
                 <a asp-area="" asp-controller="Forum" asp-action="Index" id="homeIcon" class="material-icons">home</a>
             </div>
         </div>
-        <div class="top-left">
-            <div id="forum">
-                <a asp-area="" asp-controller="Post" asp-action="Index" id="forumicon" class="material-icons">forum</a>
+        @if(HttpContextAccessor.HttpContext.Session.GetString("forumId") != null)
+        {
+            <div class="top-left">
+                <div id="forum">
+                    <a asp-area="" asp-controller="Post" asp-action="Index" id="forumicon" class="material-icons">forum</a>
+                </div>
             </div>
-        </div>
-        <div class="top-left">
-            <div id="add">
-                <a asp-area="" asp-controller="Post" asp-action="Create" id="addicon" class="material-icons">add_box</a>
+            <div class="top-left">
+                <div id="add">
+                    <a asp-area="" asp-controller="Post" asp-action="Create" id="addicon" class="material-icons">add_box</a>
+                </div>
             </div>
-        </div>
+        }
         @if (HttpContextAccessor.HttpContext.Session.GetString("User") != null)
         {
             AccountDetailVM account = new AccountDetailVM();

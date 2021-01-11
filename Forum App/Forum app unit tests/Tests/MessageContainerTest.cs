@@ -35,7 +35,7 @@ namespace Forum_app_unit_tests.Tests
             DateTime DateParsed = DateTime.Parse(date);
             List<Message> messages = new List<Message>() { new Message(id, title, description, DateParsed, senderid, receiverid) };
 
-            List<Message> results = container.GetAllBySender(receiverid);
+            List<Message> results = container.GetAllByReceiver(receiverid);
 
             messages.Should().BeEquivalentTo(results);
         }
