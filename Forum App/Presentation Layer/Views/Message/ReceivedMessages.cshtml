@@ -16,7 +16,7 @@
             <tbody>
                 @foreach(MessageDetailVM item in Model.Messages)
                 {
-                    @if(item.ReceiverId == Model.Account.Id)
+                    @if(item.ReceiverId == Model.Receiver.Id)
                     {
                         <tr>
                             <td>
@@ -29,7 +29,10 @@
                                 @Html.DisplayFor(modelItem => item.MessageTime)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.SenderId)
+                                @Html.DisplayFor(modelItem => item.SenderName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ReceiverName)
                             </td>
                         </tr>
                     }

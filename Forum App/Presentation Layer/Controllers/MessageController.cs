@@ -41,9 +41,14 @@ namespace Presentation_Layer.Controllers
                 AccountDetailVM account = new AccountDetailVM();
                 account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 MessageViewModel vm = new MessageViewModel();
-                vm.Account = account;
+                vm.Sender = account;
                 List<Message> messages = new List<Message>();
                 messages = messageContainer.GetAllBySender(account.Id);
+                foreach(Message item in messages)
+                {
+                    Account acc = accountContainer.GetById(item.ReceiverId);
+                    item.ReceiverName = acc.Username;
+                }
                 vm.Messages = messageVMConverter.ModelsToViewModels(messages);
                 return View(vm);
             }
@@ -57,9 +62,14 @@ namespace Presentation_Layer.Controllers
                 AccountDetailVM account = new AccountDetailVM();
                 account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
                 MessageViewModel vm = new MessageViewModel();
-                vm.Account = account;
+                vm.Receiver = account;
                 List<Message> messages = new List<Message>();
                 messages = messageContainer.GetAllByReceiver(account.Id);
+                foreach(Message item in messages)
+                {
+                    Account acc = accountContainer.GetById(item.SenderId);
+                    item.SenderName = acc.Username;
+                }
                 vm.Messages = messageVMConverter.ModelsToViewModels(messages);
                 return View(vm);
             }

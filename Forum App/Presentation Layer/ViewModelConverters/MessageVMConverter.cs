@@ -23,6 +23,8 @@ namespace Presentation_Layer.ViewModelConverters
                 vm.MessageTime = message.MessageTime;
                 vm.ReceiverId = message.ReceiverId;
                 vm.SenderId = message.SenderId;
+                vm.SenderName = message.SenderName;
+                vm.ReceiverName = message.ReceiverName;
                 vms.Add(vm);
             }
             return vms;
@@ -38,6 +40,8 @@ namespace Presentation_Layer.ViewModelConverters
                 MessageTime = model.MessageTime,
                 ReceiverId = model.ReceiverId,
                 SenderId = model.SenderId,
+                SenderName = model.SenderName,
+                ReceiverName = model.ReceiverName,
             };
             return vm;
         }
@@ -47,7 +51,7 @@ namespace Presentation_Layer.ViewModelConverters
             List<Message> messages = new List<Message>();
             foreach (MessageDetailVM vm in viewmodels)
             {
-                Message message = new Message(vm.Id, vm.Title, vm.MessageContent,vm.MessageTime,vm.SenderId,vm.ReceiverId);
+                Message message = new Message(vm.Id, vm.Title, vm.MessageContent,vm.MessageTime,vm.SenderId,vm.ReceiverId,vm.ReceiverName,vm.SenderName);
                 messages.Add(message);
             }
             return messages;
@@ -55,7 +59,7 @@ namespace Presentation_Layer.ViewModelConverters
 
         public Message ViewModelToModel(MessageDetailVM viewmodel)
         {
-            Message message = new Message(viewmodel.Id,viewmodel.Title,viewmodel.MessageContent,viewmodel.MessageTime,viewmodel.SenderId,viewmodel.ReceiverId);
+            Message message = new Message(viewmodel.Id,viewmodel.Title,viewmodel.MessageContent,viewmodel.MessageTime,viewmodel.SenderId,viewmodel.ReceiverId,viewmodel.ReceiverName, viewmodel.SenderName);
             return message;
         }
     }

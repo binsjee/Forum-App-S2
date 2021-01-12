@@ -5,18 +5,19 @@
     <a asp-area="" asp-controller="Post"></a>
     <div id="">
         <table class="table table-striped table-hover">
-            <h1> All posts </h1>
+            <h1> Sent messages </h1>
             <thead>
                 <tr>
                     <th>Titel</th>
                     <th>Content</th>
                     <th>Time</th>
+                    <th>Receiver</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (MessageDetailVM item in Model.Messages)
                 {
-                    @if(item.SenderId == Model.Account.Id)
+                    @if(item.SenderId == Model.Sender.Id)
                     {
 
 
@@ -31,13 +32,7 @@
                             @Html.DisplayFor(modelItem => item.MessageTime)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.SenderId)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ReceiverId)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            @Html.DisplayFor(modelItem => item.ReceiverName)
                         </td>
                     </tr>
                     }

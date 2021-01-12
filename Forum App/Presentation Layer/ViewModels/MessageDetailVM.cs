@@ -14,6 +14,8 @@ namespace Presentation_Layer.ViewModels
         public int SenderId { get; set; }
         public int ReceiverId { get; set; }
         public List<AccountDetailVM> accounts { get; set; } = new List<AccountDetailVM>();
+        public string SenderName { get; set; }
+        public string ReceiverName { get; set; }
 
     }
 }

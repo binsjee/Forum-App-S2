@@ -30,7 +30,7 @@ namespace Presentation_Layer.Controllers
         {
             Account account = vmConverter.ViewModelToModel(vm);
             accountContainer.Insert(account);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Forum");
         }
         public IActionResult Login()
         {

@@ -17,11 +17,11 @@ namespace Forum_app_unit_tests.Tests
         private static MessageContextStub stub = new MessageContextStub();
         private MessageContainer container = new MessageContainer(stub);
         [Theory]
-        [InlineData(1, "title", "content","2020-12-12", 1, 1)]
-        public void MessageGetAllBySenderTest(int id, string title, string description,string date, int senderid, int receiverid)
+        [InlineData(1, "title", "content","2020-12-12", 1, 1, "Sender", "Receiver")]
+        public void MessageGetAllBySenderTest(int id, string title, string description,string date, int senderid, int receiverid, string sendername, string receivername)
         {
             DateTime DateParsed = DateTime.Parse(date);
-            List<Message> messages = new List<Message>() { new Message(id, title, description, DateParsed, senderid, receiverid) };
+            List<Message> messages = new List<Message>() { new Message(id, title, description, DateParsed, senderid, receiverid, receivername,sendername) };
 
             List<Message> results = container.GetAllBySender(senderid);
 
@@ -29,22 +29,22 @@ namespace Forum_app_unit_tests.Tests
         }
 
         [Theory]
-        [InlineData(1, "title", "content", "2020-12-12", 1, 1)]
-        public void MessageGetAllByReceiverTest(int id, string title, string description,string date, int senderid, int receiverid)
+        [InlineData(1, "title", "content", "2020-12-12", 1, 1, "Sender", "Receiver")]
+        public void MessageGetAllByReceiverTest(int id, string title, string description,string date, int senderid, int receiverid, string sendername, string receivername)
         {
             DateTime DateParsed = DateTime.Parse(date);
-            List<Message> messages = new List<Message>() { new Message(id, title, description, DateParsed, senderid, receiverid) };
+            List<Message> messages = new List<Message>() { new Message(id, title, description, DateParsed, senderid, receiverid, receivername, sendername) };
 
             List<Message> results = container.GetAllByReceiver(receiverid);
 
             messages.Should().BeEquivalentTo(results);
         }
         [Theory]
-        [InlineData(1, "title", "content", "2020-12-12", 1, 1)]
-        public void MessageInsertTest(int id, string title, string description, string date, int senderid, int receiverid)
+        [InlineData(1, "title", "content", "2020-12-12", 1, 1, "Sender", "Receiver")]
+        public void MessageInsertTest(int id, string title, string description, string date, int senderid, int receiverid, string sendername, string receivername)
         {
             DateTime DateParsed = DateTime.Parse(date);
-            long result = container.Insert(new Message(id, title, description, DateParsed, senderid, receiverid));
+            long result = container.Insert(new Message(id, title, description, DateParsed, senderid, receiverid, receivername, sendername));
 
             Message m = container.GetById(1);
 
