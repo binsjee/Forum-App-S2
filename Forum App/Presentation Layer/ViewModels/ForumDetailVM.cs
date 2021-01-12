@@ -14,6 +14,7 @@ namespace Presentation_Layer.ViewModels
         public DateTime CreationDate { get; set; }
         public int CreatorID { get; set; }
         public AccountDetailVM Creator { get; set; } = new AccountDetailVM();
-        public List<PostDetailVM> Posts { get; set; } = new List<PostDetailVM>();
+        public AccountDetailVM account { get; set; } = new AccountDetailVM();
+        public List<PostDetailVM> posts { get; set; } = new List<PostDetailVM>();
     }
 }

@@ -42,7 +42,6 @@ namespace Presentation_Layer.Controllers
                 reply.AccountId = accountID;
                 reply.Username = account.Username;
                 replyContainer.Insert(reply);
-                //return RedirectToAction("Detail", new RouteValueDictionary(new { controller = "Post", action = "Detail", Id = postID }));
                 return Redirect("~/Post/Detail/?postID=" + postID);
             }
             return RedirectToAction("Index", "Login");

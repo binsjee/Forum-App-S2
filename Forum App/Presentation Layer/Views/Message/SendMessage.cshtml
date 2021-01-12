@@ -1,35 +1,56 @@
-﻿@*@model Tuple<Presentation_Layer.ViewModels.MessageDetailVM, List<Presentation_Layer.ViewModels.AccountDetailVM>>*@
-@model Presentation_Layer.ViewModels.MessageDetailVM;
+﻿@model Presentation_Layer.ViewModels.MessageDetailVM;
 
-<div id="">
-    <h1>Create a message</h1>
-    <form asp-controller="Message" asp-action="SendMessage" method="post">
-        <div class="formulierRij">
-            <div class="formulier-half">
-                <p><label asp-for="@Model.Title"></label></p>
-                <input asp-for="@Model.Title" />
-                <span asp-validation-for="@Model.Title"></span>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/Login.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="top-right">
+        <div id="BigTextName">
+            <div>
+                <span>Bericht maken</span>
             </div>
         </div>
-        <div class="formulierRij">
-            <div class="formulier-half">
-                <p><label asp-for="@Model.MessageContent"></label></p>
-                <input asp-for="@Model.MessageContent" />
-                <span asp-validation-for="@Model.MessageContent"></span>
+    </div>
+    <div id="LoginBoxPost" class="bottom">
+        <div class="BackgroundBox">
+            <div id="LoginForm" style="background-color:white">
+                <form asp-action="SendMessage" method="post">
+                    <table class="PostTable">
+                        <tr class="PostTr">
+                            <td class="PostTd">
+                                <input asp-for="Title" placeholder="Titel..." class="PostInputBox" />
+                                <span asp-validation-for="Title"></span>
+                            </td>
+                        </tr>
+                        <tr class="PostTr">
+                            <td class="PostTd">
+                                <input asp-for="MessageContent" placeholder="Content..." class="PostInputBox" />
+                                <span asp-validation-for="MessageContent"></span>
+                            </td>
+                        </tr>
+                        <tr class="PostTr">
+                            <td class="PostTd">
+                                <select asp-for="ReceiverId" name="ReceiverId">
+                                    @foreach (Presentation_Layer.ViewModels.AccountDetailVM account in Model.accounts)
+                                    {
+                                        <option value="@account.Id">@account.Username</option>
+                                    }
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="form-group">
+                        <input type="submit" class="LoginButton" value="Send Message!" />
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="formulierRij">
-            <div class="formulier-half">
-                Receiver<select asp-for="@Model.ReceiverId" name="ReceiverId">
-                @foreach(Presentation_Layer.ViewModels.AccountDetailVM account in Model.accounts)
-                {
-                    <option value="@account.Id">@account.Username</option>
-                }
-                </select>
-            </div>
-        </div>
-        <div class="formulierRij">
-            <input type="submit" value="Opslaan" />
-        </div>
-    </form>
-</div>
+    </div>
+</body>

@@ -32,6 +32,7 @@ namespace Presentation_Layer.Controllers
         {
             if(HttpContext.Session.GetInt32("User") != null)
             {
+                HttpContext.Session.Remove("forumId");
                 AccountDetailVM account = new AccountDetailVM();
                 ForumVM vm = new ForumVM();
                 List<Forum> forums = new List<Forum>();
@@ -53,6 +54,9 @@ namespace Presentation_Layer.Controllers
                 Forum forum = forumContainer.GetById(ForumID);
                 forum.Posts = postContainer.GetAll();
                 vm = forumConverter.ModelToViewModel(forum);
+                vm.posts = postConverter.ModelsToViewModels(forum.Posts);
+                AccountDetailVM account = JsonConvert.DeserializeObject<AccountDetailVM>(HttpContext.Session.GetString("User"));
+                vm.account = account;
                 HttpContext.Session.SetString("forumId", JsonConvert.SerializeObject(forum.Id));
                 return View(vm);
             }

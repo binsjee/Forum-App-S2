@@ -22,7 +22,7 @@
                 <a asp-area="" asp-controller="Forum" asp-action="Index" id="homeIcon" class="material-icons">home</a>
             </div>
         </div>
-        @if (HttpContextAccessor.HttpContext.Session.GetString("ForumId") != null)
+        @if(HttpContextAccessor.HttpContext.Session.GetString("forumId") != null)
         {
             <div class="top-left">
                 <div id="forum">
@@ -35,7 +35,6 @@
                 </div>
             </div>
         }
-
         @if (HttpContextAccessor.HttpContext.Session.GetString("User") != null)
         {
             AccountDetailVM account = new AccountDetailVM();
