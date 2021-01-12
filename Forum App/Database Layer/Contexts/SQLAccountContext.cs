@@ -130,7 +130,6 @@ namespace DatabaseLayer.Contexts
 
                 DataSet results = ExecuteSql(sql, parameters);
                 AccountDTO a = DataSetParser.DataSetToAccount(results, 0);
-                int b = a.Id;
                 return a;
             }
             catch(Exception e)

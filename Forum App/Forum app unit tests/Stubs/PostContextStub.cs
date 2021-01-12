@@ -10,10 +10,9 @@ namespace Forum_app_unit_tests.Stubs
 {
     class PostContextStub : IPostContext
     {
-        //public PostDTO test;
         private List<PostDTO> tests = new List<PostDTO>()
         {
-            //new PostDTO(1, "Titel", "Description", 1, 1)
+            
         }
         ;
 
